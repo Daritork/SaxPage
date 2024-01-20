@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Saxophone</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="src/sass/stylesheet.scss" />
+    <link rel="icon" type="image/x-icon" href="./src/images/nav/logo.svg" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="#"><img src="src/images/nav/logo.svg" class="nav_logo" /></a>
+      <ul class="nav__links navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#Welcome">Welcome</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#About">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#History">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Types">Types of Sax</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header" id="Welcome">
+      <div class="header_title">
+        <span>S</span>
+        <span>a</span>
+        <span>x</span>
+        <span>o</span>
+        <span>p</span>
+        <span>h</span>
+        <span>o</span>
+        <span>n</span>
+        <span>e</span>
+      </div>
+      <img
+        class="header_picture"
+        src="/src/images/header/neonSax.png"
+        id="movingSax"
+      />
+      <!--//TODO rotation of an image schould work better-->
+      <script src="src/js/Saxmove.js"></script>
+      <div class="header__second-slide" id="About">
+        <div class="header__second-slide_swiper">
+          <h2>Saxophone Parts</h2>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./src/images/header/swiper/Body.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/images/header/swiper/Mouthpiece.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./src/images/header/swiper/Reed.png" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              direction: "vertical",
+              slidesPerView: 1,
+              spaceBetween: 30,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+            });
+          </script>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="famouns-brands">
+        <div class="famouns-brands__marquee">
+          <span>
+            <img
+              src="./src/images/famousBrands/Yanagisawa.png"
+              alt="Yanagisawa"
+            />
+            <img
+              src="./src/images/famousBrands/Keilwerth.png"
+              alt="Keilwerth"
+            />
+            <img src="./src/images/famousBrands/Selmer.png" alt="Selmer" />
+            <img src="./src/images/famousBrands/Yamaha.png" alt="Yamaha" />
+            <img
+              src="./src/images/famousBrands/PMauriat.png"
+              alt="Paul Mauriat"
+            />
+            <img
+              src="./src/images/famousBrands/Cannpnball.png"
+              alt="Cannpnball"
+            />
+            <img src="./src/images/famousBrands/Jupiter.png" alt="Jupiter" />
+          </span>
+          <span>
+            <img
+              src="./src/images/famousBrands/Yanagisawa.png"
+              alt="Yanagisawa"
+            />
+            <img
+              src="./src/images/famousBrands/Keilwerth.png"
+              alt="Keilwerth"
+            />
+            <img src="./src/images/famousBrands/Selmer.png" alt="Selmer" />
+            <img src="./src/images/famousBrands/Yamaha.png" alt="Yamaha" />
+            <img
+              src="./src/images/famousBrands/PMauriat.png"
+              alt="Paul Mauriat"
+            />
+            <img
+              src="./src/images/famousBrands/Cannpnball.png"
+              alt="Cannpnball"
+            />
+            <img src="./src/images/famousBrands/Jupiter.png" alt="Jupiter" />
+          </span>
+        </div>
+      </div>
+      <article class="history" id="History">
+        <h1>History</h1>
+        <p class="history_article">
+          The saxophone is only a few instruments in wide use today known to be
+          invented by a
+          <span class="gold"> single individual</span>. His name is Adolphe Sax:
+          that is why it is called the saxophone. History tells us that
+          <span class="gold"> Adolphe Sax (1814 - 1894) </span> was a musical
+          instrument designer born in Belgium who could play many wind
+          instruments. His idea was to
+          <span class="gold">
+            create an instrument that combined the best qualities of a woodwind
+            instrument with the best qualities of a brass instrument,
+          </span>
+          and in the 1840s he conceived the saxophone. This invention was
+          <span class="gold">patented in Paris in 1846</span>.
+        </p>
+        <img src="./src/images/history/deco.png" alt="deco" />
+      </article>
+      <div class="saxTypes" id="Types"></div>
+    </main>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
