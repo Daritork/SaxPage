@@ -89,13 +89,56 @@ function List() {
         <input />
         <div className="saxTypes__filter-fields__field">
           <h3>Pitch</h3>
-          <div className="saxTypes__filter-fields__field_ratios"></div>
+          <div className="saxTypes__filter-fields__field_radios pitch">
+            <div className="choises">
+              <input
+                type="radio"
+                value={"All"}
+                id="all"
+                defaultChecked
+                name="Pitch"
+              />
+              <label htmlFor="all">All</label>
+            </div>
+            <div className="choises">
+              <input
+                type="radio"
+                value={"E♭"}
+                id="EsPitch"
+                checked
+                name="Pitch"
+              />
+              <label htmlFor="EsPitch">E♭</label>
+            </div>
+            <div className="choises">
+              <input
+                type="radio"
+                value={"B♭"}
+                id="BPitch"
+                checked
+                name="Pitch"
+              />
+              <label htmlFor="BPitch">B♭</label>
+            </div>
+            <div className="choises">
+              <input
+                type="radio"
+                value={"C"}
+                id="CPitch"
+                checked
+                name="Pitch"
+              />
+              <label htmlFor="CPitch">C</label>
+            </div>
+          </div>
         </div>
         <div className="saxTypes__filter-fields__field">
           <h3>Length measures</h3>
-          <div className="saxTypes__filter-fields__field_ratios"></div>
+          <div className="saxTypes__filter-fields__field_radios length"></div>
         </div>
-        <button onClick={handleSubmit}>Filter</button>
+        <button type="submit" onClick={handleSubmit}>
+          Filter
+        </button>
       </form>
       <div className="saxTypes__list">
         {saxTypes.map((saxType) => (
@@ -105,6 +148,9 @@ function List() {
             <ul className="saxTypes__list__item_list  ">
               <li>
                 <h4>Pitch: {saxType.pitch}</h4>
+              </li>
+              <li>
+                <h4>Height: {saxType.heightCm} cm</h4>
               </li>
             </ul>
           </div>

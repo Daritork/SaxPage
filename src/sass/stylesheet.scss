@@ -339,6 +339,33 @@ main {
   align-items: center;
   padding: 0 5% 3% 5%;
 
+  &__filter-fields {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+
+    &__field {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1vh;
+
+      &_radios {
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+
+        .choises {
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
   &__list {
     width: 100%;
     display: grid;
@@ -355,6 +382,10 @@ main {
       img {
         height: 60%;
         width: auto;
+      }
+
+      &_list {
+        list-style: none;
       }
     }
   }
