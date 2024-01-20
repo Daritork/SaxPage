@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Sopranino from "./images/saxTypes/Sopranino.png";
-import Studio_Soprano from "./images/saxTypes/Sopranino.png";
-import Curved_Soprano from "./images/saxTypes/Sopranino.png";
-import Alto from "./images/saxTypes/Sopranino.png";
-import Tenor from "./images/saxTypes/Sopranino.png";
-import Baritone from "./images/saxTypes/Sopranino.png";
-import Bass from "./images/saxTypes/Sopranino.png";
-import Contrabass from "./images/saxTypes/Sopranino.png";
-import C from "./images/saxTypes/Sopranino.png";
+import Studio_Soprano from "./images/saxTypes/Studio Soprano.png";
+import Curved_Soprano from "./images/saxTypes/Curved Soprano.png";
+import Alto from "./images/saxTypes/Alto.png";
+import Tenor from "./images/saxTypes/Tenor.png";
+import Baritone from "./images/saxTypes/Baritone.png";
+import Bass from "./images/saxTypes/Bass.png";
+import Contrabass from "./images/saxTypes/Contrabass.png";
+import C from "./images/saxTypes/C -.png";
 
 function List() {
   const [saxTypes] = useState<
