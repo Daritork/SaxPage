@@ -2,7 +2,7 @@
   "name": "saxpage",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://daritork.github.io",
+  "homepage": "https://daritork.github.io/SaxPage/",
   "type": "module",
   "scripts": {
     "dev": "vite",

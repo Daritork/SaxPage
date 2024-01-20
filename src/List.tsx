@@ -41,7 +41,9 @@ function List() {
       <div className="saxTypes__list">
         {saxTypes.map((saxType) => (
           <div className="saxTypes__list__item" key={saxType.id}>
-            <img src={"./src/images/saxTypes/" + saxType.name + ".png"}></img>
+            <img
+              src={"./SaxPage/images/saxTypes/" + saxType.name + ".png"}
+            ></img>
             <h3>{saxType.name + " Saxophone"}</h3>
             <ul className="saxTypes__list__item_list  ">
               <li>
