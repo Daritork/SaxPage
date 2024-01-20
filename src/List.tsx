@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function List() {
-  const [saxTypes, setsaxTypes] = useState<
+  const [saxTypes] = useState<
     {
       id: any;
       name: string;
