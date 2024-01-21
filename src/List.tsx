@@ -10,12 +10,13 @@ import Contrabass from "./images/saxTypes/Contrabass.png";
 import C from "./images/saxTypes/C -.png";
 
 function List() {
+  //*Saxophone List
   const [saxTypes] = useState<
     {
       id: any;
       name: string;
-      heightCm?: number;
-      heightIn?: number;
+      heightCm: number;
+      heightIn: number;
       pitch: string;
       imgPath: any;
     }[]
@@ -23,7 +24,7 @@ function List() {
     {
       id: 1,
       name: "Sopranino",
-      pitch: "E♭",
+      pitch: "Es",
       heightCm: 33,
       heightIn: 13,
       imgPath: Sopranino,
@@ -31,7 +32,7 @@ function List() {
     {
       id: 2,
       name: "Studio Soprano",
-      pitch: "B♭",
+      pitch: "B",
       heightCm: 71,
       heightIn: 28,
       imgPath: Studio_Soprano,
@@ -39,7 +40,7 @@ function List() {
     {
       id: 3,
       name: "Curved Soprano",
-      pitch: "B♭",
+      pitch: "B",
       heightCm: 46,
       heightIn: 18,
       imgPath: Curved_Soprano,
@@ -47,7 +48,7 @@ function List() {
     {
       id: 4,
       name: "Alto",
-      pitch: "E♭",
+      pitch: "Es",
       heightCm: 74,
       heightIn: 29,
       imgPath: Alto,
@@ -55,7 +56,7 @@ function List() {
     {
       id: 5,
       name: "Tenor",
-      pitch: "B♭",
+      pitch: "B",
       heightCm: 94,
       heightIn: 37,
       imgPath: Tenor,
@@ -63,77 +64,156 @@ function List() {
     {
       id: 6,
       name: "Baritone",
-      pitch: "E♭",
+      pitch: "Es",
       heightCm: 132,
       heightIn: 52,
       imgPath: Baritone,
     },
-    { id: 7, name: "Bass", pitch: "B♭", imgPath: Bass },
+    {
+      id: 7,
+      name: "Bass",
+      pitch: "B",
+      heightCm: 133,
+      heightIn: 52,
+      imgPath: Bass,
+    },
     {
       id: 8,
       name: "Contrabass",
-      pitch: "E♭",
+      pitch: "Es",
       heightCm: 200,
       heightIn: 79,
       imgPath: Contrabass,
     },
-    { id: 9, name: "C -", pitch: "C", imgPath: C },
+    {
+      id: 9,
+      name: "C -",
+      pitch: "C",
+      heightCm: 64,
+      heightIn: 25,
+      imgPath: C,
+    },
   ]);
+  //* Use content prefer
+  const [filter, setFilter] = useState<{ pitch: string; lengthIn: string }>({
+    pitch: "All",
+    lengthIn: "cm",
+  });
+  //* Search value
+  const [search, setSearch] = useState("");
 
-  function handleSubmit() {}
+  function handleSubmit(e: any) {
+    e.preventDefault();
+  }
+
+  function onPitchChange(newPitch: string) {
+    setFilter({ pitch: newPitch, lengthIn: filter.lengthIn });
+  }
+
+  function onLengthInChange(newMeasures: string) {
+    setFilter({ pitch: filter.pitch, lengthIn: newMeasures });
+  }
+
+  function onChangeSearch(e: any) {
+    setSearch(e.target.value);
+  }
 
   return (
     <>
       <h1>Saxophone Types</h1>
-      <form className="saxTypes__filter-fields" onSubmit={handleSubmit}>
-        <input />
+      <form
+        className="saxTypes__filter-fields"
+        onSubmit={(e) => handleSubmit(e)}
+      >
+        <input
+          type="text"
+          className="saxTypes__filter-fields_searchbar"
+          placeholder="Search"
+          value={search}
+          onChange={(e) => onChangeSearch(e)}
+        />
         <div className="saxTypes__filter-fields__field">
           <h3>Pitch:</h3>
-          <div className="saxTypes__filter-fields__field_radios pitch">
+          <div className="saxTypes__filter-fields__field_radios">
             <input
               id="All"
               type="radio"
               value={"All"}
               name="Pitch"
-              defaultChecked
+              checked={filter.pitch === "All"}
+              onChange={() => onPitchChange("All")}
             />
-            <input id="Es" type="radio" value={"Es"} name="Pitch" />
-            <input id="B" type="radio" value={"B"} name="Pitch" />
-            <input id="C" type="radio" value={"C"} name="Pitch" />
+            <input
+              id="Es"
+              type="radio"
+              value={"Es"}
+              name="Pitch"
+              checked={filter.pitch === "Es"}
+              onChange={() => onPitchChange("Es")}
+            />
+            <input
+              id="B"
+              type="radio"
+              value={"B"}
+              name="Pitch"
+              checked={filter.pitch === "B"}
+              onChange={() => onPitchChange("B")}
+            />
+            <input
+              id="C"
+              type="radio"
+              value={"C"}
+              name="Pitch"
+              checked={filter.pitch === "C"}
+              onChange={() => onPitchChange("C")}
+            />
           </div>
         </div>
         <div className="saxTypes__filter-fields__field">
           <h3>Length measures:</h3>
-          <div className="saxTypes__filter-fields__field_radios length">
+          <div className="saxTypes__filter-fields__field_radios">
             <input
               id="cm"
               type="radio"
               value={"cm"}
               name="lenght"
-              defaultChecked
+              checked={filter.lengthIn === "cm"}
+              onChange={() => onLengthInChange("cm")}
             />
-            <input id="in" type="radio" value={"in"} name="lenght" />
+            <input
+              id="in"
+              type="radio"
+              value={"in"}
+              name="lenght"
+              checked={filter.lengthIn === "in"}
+              onChange={() => onLengthInChange("in")}
+            />
           </div>
         </div>
-        <button type="submit" onClick={handleSubmit}>
-          Filter
-        </button>
       </form>
       <div className="saxTypes__list">
-        {saxTypes.map((saxType) => (
-          <div className="saxTypes__list__item" key={saxType.id}>
-            <img src={saxType.imgPath}></img>
-            <h3>{saxType.name + " Saxophone"}</h3>
-            <ul className="saxTypes__list__item_list  ">
-              <li>
-                <h4>Pitch: {saxType.pitch}</h4>
-              </li>
-              <li>
-                <h4>Height: {saxType.heightCm} cm</h4>
-              </li>
-            </ul>
-          </div>
-        ))}
+        {saxTypes.map(
+          (saxType) =>
+            (saxType.pitch === filter.pitch || filter.pitch === "All") && (
+              <div className="saxTypes__list__item" key={saxType.id}>
+                <img src={saxType.imgPath}></img>
+                <h3>{saxType.name + " Saxophone"}</h3>
+                <ul className="saxTypes__list__item_list">
+                  <li>
+                    <h4>Pitch: {saxType.pitch}</h4>
+                  </li>
+                  <li>
+                    <h4>
+                      Height: ~
+                      {filter.lengthIn === "cm"
+                        ? saxType.heightCm + " cm"
+                        : saxType.heightIn + " in"}
+                    </h4>
+                  </li>
+                </ul>
+              </div>
+            )
+        )}
       </div>
     </>
   );
