@@ -88,53 +88,32 @@ function List() {
       <form className="saxTypes__filter-fields" onSubmit={handleSubmit}>
         <input />
         <div className="saxTypes__filter-fields__field">
-          <h3>Pitch</h3>
+          <h3>Pitch:</h3>
           <div className="saxTypes__filter-fields__field_radios pitch">
-            <div className="choises">
-              <input
-                type="radio"
-                value={"All"}
-                id="all"
-                defaultChecked
-                name="Pitch"
-              />
-              <label htmlFor="all">All</label>
-            </div>
-            <div className="choises">
-              <input
-                type="radio"
-                value={"E♭"}
-                id="EsPitch"
-                checked
-                name="Pitch"
-              />
-              <label htmlFor="EsPitch">E♭</label>
-            </div>
-            <div className="choises">
-              <input
-                type="radio"
-                value={"B♭"}
-                id="BPitch"
-                checked
-                name="Pitch"
-              />
-              <label htmlFor="BPitch">B♭</label>
-            </div>
-            <div className="choises">
-              <input
-                type="radio"
-                value={"C"}
-                id="CPitch"
-                checked
-                name="Pitch"
-              />
-              <label htmlFor="CPitch">C</label>
-            </div>
+            <input
+              id="All"
+              type="radio"
+              value={"All"}
+              name="Pitch"
+              defaultChecked
+            />
+            <input id="Es" type="radio" value={"Es"} name="Pitch" />
+            <input id="B" type="radio" value={"B"} name="Pitch" />
+            <input id="C" type="radio" value={"C"} name="Pitch" />
           </div>
         </div>
         <div className="saxTypes__filter-fields__field">
-          <h3>Length measures</h3>
-          <div className="saxTypes__filter-fields__field_radios length"></div>
+          <h3>Length measures:</h3>
+          <div className="saxTypes__filter-fields__field_radios length">
+            <input
+              id="cm"
+              type="radio"
+              value={"cm"}
+              name="lenght"
+              defaultChecked
+            />
+            <input id="in" type="radio" value={"in"} name="lenght" />
+          </div>
         </div>
         <button type="submit" onClick={handleSubmit}>
           Filter

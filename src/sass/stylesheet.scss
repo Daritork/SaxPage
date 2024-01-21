@@ -341,26 +341,63 @@ main {
 
   &__filter-fields {
     display: flex;
-    width: 90%;
+    width: 95%;
     align-items: center;
     justify-content: space-between;
+    border-radius: 30px;
+    padding: 0 2vw;
 
     &__field {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 1vh;
+      gap: 1vw;
+      border-radius: 20px;
+      padding: 1vh 1vw;
 
       &_radios {
         display: flex;
         align-items: center;
-        gap: 2vw;
+        height: 100%;
+        background: transparent;
+        border-radius: 10px;
 
-        .choises {
+        input {
+          width: auto;
+          height: 100%;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          outline: none;
+          cursor: pointer;
+          padding: 1vh 2vw;
+          font-family: Marcellus;
+          font-size: 1.2rem;
           color: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          transition: all 0.2s linear;
+
+          &:first-child {
+            height: 100%;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+          }
+
+          &:last-child {
+            height: 100%;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+        }
+
+        input:checked {
+          background-color: $gold;
+          color: #fff;
+        }
+
+        input:before {
+          content: attr(id);
+          display: inline-block;
+          text-align: center;
+          width: 100%;
         }
       }
     }
