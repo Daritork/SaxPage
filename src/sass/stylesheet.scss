@@ -350,14 +350,27 @@ main {
     &_searchbar {
       width: auto;
       height: 4vh;
-      padding: 1.2vh 1vw;
-      border: 2px solid $gold;
+      padding: 2.2vh 1vw;
+      border: 0;
+      border: 2px solid #fff;
       border-radius: 10px;
+      transition: all 0.3s linear;
       background: transparent;
       color: #fff;
+      font-size: 1.2rem;
 
       &::placeholder {
         color: #fff;
+        transition: all 0.3s linear;
+      }
+
+      &:focus {
+        outline: 0;
+        border: 2px solid $gold;
+      }
+
+      &:focus::placeholder {
+        color: transparent;
       }
     }
 
@@ -389,6 +402,7 @@ main {
           font-size: 1.4em;
           color: #fff;
           transition: all 0.2s linear;
+          border-radius: 0;
 
           &:first-child {
             height: 100%;
@@ -425,14 +439,13 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
     &__item {
-      height: 60vh;
       display: flex;
       gap: 2vh;
       flex-direction: column;
       align-items: center;
 
       img {
-        height: 60%;
+        height: 40vh;
         width: auto;
       }
 
