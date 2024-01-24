@@ -82,8 +82,8 @@ function List() {
       id: 8,
       name: "Bass",
       pitch: "B",
-      heightCm: 133,
-      heightIn: 52,
+      heightCm: 158,
+      heightIn: 62,
       imgPath: Bass,
     },
     {
