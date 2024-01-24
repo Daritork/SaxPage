@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Soprillo from "./images/saxTypes/Soprillo.png";
 import Sopranino from "./images/saxTypes/Sopranino.png";
 import Studio_Soprano from "./images/saxTypes/Studio Soprano.png";
 import Curved_Soprano from "./images/saxTypes/Curved Soprano.png";
@@ -23,14 +24,22 @@ function List() {
   >([
     {
       id: 1,
-      name: "Sopranino",
-      pitch: "Es",
+      name: "Soprillo",
+      pitch: "B",
       heightCm: 33,
       heightIn: 13,
-      imgPath: Sopranino,
+      imgPath: Soprillo,
     },
     {
       id: 2,
+      name: "Sopranino",
+      pitch: "Es",
+      heightCm: 68,
+      heightIn: 27,
+      imgPath: Sopranino,
+    },
+    {
+      id: 3,
       name: "Studio Soprano",
       pitch: "B",
       heightCm: 71,
@@ -38,7 +47,7 @@ function List() {
       imgPath: Studio_Soprano,
     },
     {
-      id: 3,
+      id: 4,
       name: "Curved Soprano",
       pitch: "B",
       heightCm: 46,
@@ -46,7 +55,7 @@ function List() {
       imgPath: Curved_Soprano,
     },
     {
-      id: 4,
+      id: 5,
       name: "Alto",
       pitch: "Es",
       heightCm: 74,
@@ -54,7 +63,7 @@ function List() {
       imgPath: Alto,
     },
     {
-      id: 5,
+      id: 6,
       name: "Tenor",
       pitch: "B",
       heightCm: 94,
@@ -62,7 +71,7 @@ function List() {
       imgPath: Tenor,
     },
     {
-      id: 6,
+      id: 7,
       name: "Baritone",
       pitch: "Es",
       heightCm: 132,
@@ -70,7 +79,7 @@ function List() {
       imgPath: Baritone,
     },
     {
-      id: 7,
+      id: 8,
       name: "Bass",
       pitch: "B",
       heightCm: 133,
@@ -78,7 +87,7 @@ function List() {
       imgPath: Bass,
     },
     {
-      id: 8,
+      id: 9,
       name: "Contrabass",
       pitch: "Es",
       heightCm: 200,
@@ -86,7 +95,7 @@ function List() {
       imgPath: Contrabass,
     },
     {
-      id: 9,
+      id: 10,
       name: "C -",
       pitch: "C",
       heightCm: 64,
