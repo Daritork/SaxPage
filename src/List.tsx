@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Soprillo from "./images/saxTypes/Soprillo.png";
 import Sopranino from "./images/saxTypes/Sopranino.png";
 import Studio_Soprano from "./images/saxTypes/Studio Soprano.png";
@@ -11,6 +12,8 @@ import Contrabass from "./images/saxTypes/Contrabass.png";
 import C from "./images/saxTypes/C -.png";
 
 function List() {
+  //*Auto-Animate
+  const [parent] = useAutoAnimate({ duration: 300 });
   //*Saxophone List
   const [saxTypes] = useState<
     {
@@ -103,7 +106,7 @@ function List() {
       imgPath: C,
     },
   ]);
-  //* Use content prefer
+  //* User content prefer
   const [filter, setFilter] = useState<{ pitch: string; lengthIn: string }>({
     pitch: "All",
     lengthIn: "cm",
@@ -124,7 +127,7 @@ function List() {
   function handleSubmit(e: any) {
     e.preventDefault();
   }
-
+  //*Filter Changers
   function onPitchChange(newPitch: string) {
     setFilter({ pitch: newPitch, lengthIn: filter.lengthIn });
   }
@@ -132,13 +135,14 @@ function List() {
   function onLengthInChange(newMeasures: string) {
     setFilter({ pitch: filter.pitch, lengthIn: newMeasures });
   }
-
+  //* Search Function
   function onChangeSearch(e: any) {
     setSearchTerm(e.target.value);
   }
+  //* Search method
   useEffect(() => {
     const results: any = saxTypes.filter((type) =>
-      type.name.includes(searchTerm)
+      type.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResult(results);
   }, [searchTerm]);
@@ -216,7 +220,7 @@ function List() {
           </div>
         </div>
       </form>
-      <div className="saxTypes__list">
+      <div className="saxTypes__list" ref={parent}>
         {searchResult.map(
           (saxType) =>
             (saxType.pitch === filter.pitch || filter.pitch === "All") && (
