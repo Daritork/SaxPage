@@ -225,7 +225,7 @@ function List() {
           (saxType) =>
             (saxType.pitch === filter.pitch || filter.pitch === "All") && (
               <div className="saxTypes__list__item" key={saxType.id}>
-                <img src={saxType.imgPath}></img>
+                <img alt={saxType.imgPath} src={saxType.imgPath}></img>
                 <h3>{saxType.name + " Saxophone"}</h3>
                 <ul className="saxTypes__list__item_list">
                   <li>
