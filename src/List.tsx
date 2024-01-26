@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Soprillo from "./images/saxTypes/Soprillo.png";
 import Sopranino from "./images/saxTypes/Sopranino.png";
 import Studio_Soprano from "./images/saxTypes/Studio Soprano.png";
@@ -108,8 +108,18 @@ function List() {
     pitch: "All",
     lengthIn: "cm",
   });
-  //* Search value
-  const [search, setSearch] = useState("");
+  //*Search result
+  const [searchResult, setSearchResult] = useState<
+    {
+      id: any;
+      name: string;
+      heightCm: number;
+      heightIn: number;
+      pitch: string;
+      imgPath: any;
+    }[]
+  >([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   function handleSubmit(e: any) {
     e.preventDefault();
@@ -124,8 +134,14 @@ function List() {
   }
 
   function onChangeSearch(e: any) {
-    setSearch(e.target.value);
+    setSearchTerm(e.target.value);
   }
+  useEffect(() => {
+    const results: any = saxTypes.filter((type) =>
+      type.name.includes(searchTerm)
+    );
+    setSearchResult(results);
+  }, [searchTerm]);
 
   return (
     <>
@@ -138,7 +154,7 @@ function List() {
           type="text"
           className="saxTypes__filter-fields_searchbar"
           placeholder="Search"
-          value={search}
+          value={searchTerm}
           onChange={(e) => onChangeSearch(e)}
         />
         <div className="saxTypes__filter-fields__field">
@@ -201,7 +217,7 @@ function List() {
         </div>
       </form>
       <div className="saxTypes__list">
-        {saxTypes.map(
+        {searchResult.map(
           (saxType) =>
             (saxType.pitch === filter.pitch || filter.pitch === "All") && (
               <div className="saxTypes__list__item" key={saxType.id}>
