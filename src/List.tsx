@@ -220,30 +220,36 @@ function List() {
           </div>
         </div>
       </form>
-      <div className="saxTypes__list" ref={parent}>
-        {searchResult.map(
-          (saxType) =>
-            (saxType.pitch === filter.pitch || filter.pitch === "All") && (
-              <div className="saxTypes__list__item" key={saxType.id}>
-                <img alt={saxType.imgPath} src={saxType.imgPath}></img>
-                <h3>{saxType.name + " Saxophone"}</h3>
-                <ul className="saxTypes__list__item_list">
-                  <li>
-                    <h4>Pitch: {saxType.pitch}</h4>
-                  </li>
-                  <li>
-                    <h4>
-                      Height: ~
-                      {filter.lengthIn === "cm"
-                        ? saxType.heightCm + " cm"
-                        : saxType.heightIn + " in"}
-                    </h4>
-                  </li>
-                </ul>
-              </div>
-            )
-        )}
-      </div>
+      {searchResult.length > 0 ? (
+        <div className="saxTypes__list" ref={parent}>
+          {searchResult.map(
+            (saxType) =>
+              (saxType.pitch === filter.pitch || filter.pitch === "All") && (
+                <div className="saxTypes__list__item" key={saxType.id}>
+                  <img alt={saxType.imgPath} src={saxType.imgPath}></img>
+                  <h3>{saxType.name + " Saxophone"}</h3>
+                  <ul className="saxTypes__list__item_list">
+                    <li>
+                      <h4>Pitch: {saxType.pitch}</h4>
+                    </li>
+                    <li>
+                      <h4>
+                        Height: ~
+                        {filter.lengthIn === "cm"
+                          ? saxType.heightCm + " cm"
+                          : saxType.heightIn + " in"}
+                      </h4>
+                    </li>
+                  </ul>
+                </div>
+              )
+          )}
+        </div>
+      ) : (
+        <div className="saxTypes__list_no-items">
+          <h2>🎷 No Items Found 🎷</h2>
+        </div>
+      )}
     </>
   );
 }

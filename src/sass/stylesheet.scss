@@ -439,6 +439,14 @@ main {
     gap: 100px;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
+    &_no-items {
+      height: 70svh;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     &__item {
       display: flex;
       gap: 2vh;
