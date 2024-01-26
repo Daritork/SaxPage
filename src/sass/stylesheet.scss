@@ -134,7 +134,7 @@ h4 {
   &_title {
     -webkit-text-stroke: 6px $gold;
     position: relative;
-    top: 20vh;
+    top: 12vh;
     font-family: LilitaOne;
     font-size: 120px;
     font-style: normal;
@@ -180,7 +180,7 @@ h4 {
   &_picture {
     height: auto;
     position: sticky;
-    bottom: -20vh;
+    bottom: -10vh;
     top: 0;
     animation: 1s movement linear infinite;
     animation-play-state: paused;
