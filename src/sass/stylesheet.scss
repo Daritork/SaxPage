@@ -485,7 +485,48 @@ main {
     }
   }
 }
+//TODO Footer style
 .footer {
-  margin-top: 5vh;
-  background-color: #000;
+  padding: 0 8vw 1vh 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2vh;
+
+  &_divide-line {
+    height: 5px;
+    background-color: $gold;
+    border: 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__subscription {
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+    }
+
+    &__social-media {
+      &__list {
+        margin-top: 2vh;
+        display: flex;
+        list-style: none;
+        gap: 3vw;
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    align-self: center;
+
+    a {
+      text-decoration: none;
+      color: #fdbd01;
+    }
+  }
 }
