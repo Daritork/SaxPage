@@ -1,4 +1,5 @@
 $gold: #fdbd01;
+$white: #f0f0f0;
 
 @font-face {
   font-family: LilitaOne;
@@ -65,7 +66,7 @@ h4,
 h5,
 h6,
 p {
-  color: #fff;
+  color: $white;
   font-family: Marcellus;
 }
 
@@ -103,7 +104,8 @@ h4 {
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: $white;
+      transition: all 0.2s ease-in-out;
 
       &.active {
         color: $gold;
@@ -338,40 +340,59 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 5% 3% 5%;
+  padding: 0 4% 3% 4%;
 
   &__filter-fields {
     display: flex;
-    width: 95%;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     border-radius: 30px;
-    padding: 0 2vw;
 
-    &_searchbar {
-      width: auto;
-      height: 4vh;
-      padding: 2.2vh 1vw;
-      border: 0;
-      border: 2px solid #fff;
-      border-radius: 10px;
-      transition: all 0.3s linear;
-      background: transparent;
-      color: #fff;
-      font-size: 1.2rem;
+    &__searchbar {
+      max-width: 100%;
+      height: 100%;
+      display: flex;
 
-      &::placeholder {
-        color: #fff;
-        transition: all 0.3s linear;
-      }
-
-      &:focus {
-        outline: 0;
+      &_input {
+        width: auto;
+        height: 4vh;
+        padding: 2.2vh 1vw;
+        border: 0;
         border: 2px solid $gold;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        transition: all 0.3s linear;
+        background: transparent;
+        color: $white;
+        font-size: 1.2rem;
+
+        &::placeholder {
+          color: $white;
+          transition: all 0.3s linear;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:focus::placeholder {
+          color: transparent;
+        }
       }
 
-      &:focus::placeholder {
-        color: transparent;
+      &_span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1vw;
+        background-color: $gold;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 1.5rem;
+        font-family: Marcellus;
       }
     }
 
@@ -401,7 +422,7 @@ main {
           padding: 1vh 2vw;
           font-family: Marcellus;
           font-size: 1.4em;
-          color: #fff;
+          color: $white;
           transition: all 0.2s linear;
           border-radius: 0;
 
@@ -420,7 +441,7 @@ main {
 
         input:checked {
           background-color: $gold;
-          color: #fff;
+          color: #000;
         }
 
         input:before {
@@ -436,7 +457,7 @@ main {
   &__list {
     width: 100%;
     display: grid;
-    gap: 100px;
+    gap: 8vw;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
     &_no-items {
@@ -463,4 +484,8 @@ main {
       }
     }
   }
+}
+.footer {
+  margin-top: 5vh;
+  background-color: #000;
 }

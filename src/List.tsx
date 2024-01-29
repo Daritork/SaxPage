@@ -17,7 +17,7 @@ function List() {
   //*Saxophone List
   const [saxTypes] = useState<
     {
-      id: any;
+      id: number;
       name: string;
       heightCm: number;
       heightIn: number;
@@ -106,15 +106,17 @@ function List() {
       imgPath: C,
     },
   ]);
+
   //* User content prefer
   const [filter, setFilter] = useState<{ pitch: string; lengthIn: string }>({
     pitch: "All",
     lengthIn: "cm",
   });
+
   //*Search result
   const [searchResult, setSearchResult] = useState<
     {
-      id: any;
+      id: number;
       name: string;
       heightCm: number;
       heightIn: number;
@@ -127,21 +129,26 @@ function List() {
   function handleSubmit(e: any) {
     e.preventDefault();
   }
+
   //*Filter Changers
   function onPitchChange(newPitch: string) {
+    //*Filter settings change
     setFilter({ pitch: newPitch, lengthIn: filter.lengthIn });
   }
 
   function onLengthInChange(newMeasures: string) {
+    //*Filter settings change
     setFilter({ pitch: filter.pitch, lengthIn: newMeasures });
   }
+
   //* Search Function
   function onChangeSearch(e: any) {
     setSearchTerm(e.target.value);
   }
+
   //* Search method
   useEffect(() => {
-    const results: any = saxTypes.filter((type) =>
+    const results: any[] = saxTypes.filter((type) =>
       type.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResult(results);
@@ -154,13 +161,18 @@ function List() {
         className="saxTypes__filter-fields"
         onSubmit={(e) => handleSubmit(e)}
       >
-        <input
-          type="text"
-          className="saxTypes__filter-fields_searchbar"
-          placeholder="Search"
-          value={searchTerm}
-          onChange={(e) => onChangeSearch(e)}
-        />
+        <div className="saxTypes__filter-fields__searchbar">
+          <input
+            type="text"
+            className="saxTypes__filter-fields__searchbar_input"
+            placeholder="Search Name"
+            value={searchTerm}
+            onChange={(e) => onChangeSearch(e)}
+          />
+          <span className="saxTypes__filter-fields__searchbar_span">
+            Saxophone
+          </span>
+        </div>
         <div className="saxTypes__filter-fields__field">
           <h3>Pitch:</h3>
           <div className="saxTypes__filter-fields__field_radios">
