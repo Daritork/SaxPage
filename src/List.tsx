@@ -155,7 +155,7 @@ function List() {
     );
     filter.pitch != "All" && results.filter((type) => type.pitch === filter.pitch)
     setSearchResult(results);
-  }, [searchTerm]);
+  }, [searchTerm || filter]);
 
   return (
     <>
