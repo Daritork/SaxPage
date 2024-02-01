@@ -153,11 +153,8 @@ function List() {
     const results: any[] = saxTypes.filter((type) =>
       type.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    console.log(results);
-    filter.pitch != "All" &&
-      results.filter((type) => type.pitch === filter.pitch);
     setSearchResult(results);
-  }, [searchTerm || filter]);
+  }, [searchTerm]);
 
   return (
     <>
