@@ -3,6 +3,9 @@
   <head>
     <title>Saxophone</title>
     <meta charset="utf-8" />
+    <meta name="description" content="Portfolio webpage" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, React.js" />
+    <meta name="author" content="Daritork" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -46,7 +49,9 @@
         class="header_picture"
         src="/src/images/header/neonSax.png"
         id="movingSax"
+        usemap="#workmap"
       />
+      <map name="workmap"> </map>
       <div class="header__second-slide">
         <div class="header__second-slide_swiper">
           <h2>Saxophone Parts</h2>
@@ -141,11 +146,15 @@
           The saxophone is one of the few instruments in wide use today that
           were invented by a
           <span class="gold"> single individual</span>. The inventer,
-          <span class="gold">Antoine-Joseph Sax (1814 - 1894)</span>, was known
-          by his nickname "Adolphe Sax", that is why it is called the saxophone.
-          History tells us that Adolphe Sax was a musical instrument designer
-          born in Dinant, Belgium who could play, deign and create many wind
-          instruments. His idea was to
+          <a
+            class="creator-info"
+            onclick="CreatorInfo()"
+            title="Click to see more"
+            ><span class="gold">Antoine-Joseph Sax (1814 - 1894)</span></a
+          >, was known by his nickname "Adolphe Sax", that is why it is called
+          the saxophone. History tells us that Adolphe Sax was a musical
+          instrument designer born in Dinant, Belgium who could play, deign and
+          create many wind instruments. His idea was to
           <span class="gold">
             create an instrument that combined the best qualities of a woodwind
             instrument with the best qualities of a brass instrument,
@@ -153,6 +162,7 @@
           and in the 1840s he conceived the saxophone. This invention was
           <span class="gold">patented in Paris in 1846</span>.
         </p>
+        <script></script>
         <img src="./src/images/history/deco.png" alt="deco" />
       </article>
       <div class="saxTypes" id="Types"></div>
@@ -163,7 +173,17 @@
       <div class="footer__content">
         <form class="footer__content__subscription">
           <h3>Stay Connected</h3>
-          <div><input type="email" /> <input type="submit" /></div>
+          <div class="footer__content__subscription__form">
+            <input
+              class="footer__content__subscription__form_email"
+              placeholder="example@email.com"
+              type="email"
+            />
+            <input
+              class="footer__content__subscription__form_submit"
+              type="submit"
+            />
+          </div>
         </form>
         <div class="footer__content__social-media">
           <div class="footer__content__social-media__title">
@@ -175,26 +195,32 @@
           <ul class="footer__content__social-media__list">
             <li class="footer__content__social-media__list_element">
               <a href="https://github.com/Daritork" target="_blank"
-                ><img src="./src/images/footer/GitHub.png" />
+                ><img alt="GitHub link" src="./src/images/footer/GitHub.png" />
               </a>
             </li>
             <li class="footer__content__social-media__list_element">
               <a
                 href="https://linkedin.com/in/dmytro-diatlov-26aba7285"
                 target="_blank"
-                ><img src="./src/images/footer/LinkedIn.png" />
+                ><img
+                  alt="LinkedIn link"
+                  src="./src/images/footer/LinkedIn.png"
+                />
               </a>
             </li>
             <li class="footer__content__social-media__list_element">
               <a href="https://www.instagram.com/dimon_lucky_/" target="_blank"
-                ><img src="./src/images/footer/Instagram.png" />
+                ><img
+                  alt="Instagram link"
+                  src="./src/images/footer/Instagram.png"
+                />
               </a>
             </li>
           </ul>
         </div>
       </div>
       <p>
-        Designed by
+        Designed and developed by
         <a href="https://github.com/Daritork" target="_blank">@Daritork</a>
       </p>
     </footer>

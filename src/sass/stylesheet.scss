@@ -2,8 +2,8 @@ $gold: #fdbd01;
 $white: #f0f0f0;
 
 @font-face {
-  font-family: LilitaOne;
-  src: url(/src/images/fonts/LilitaOne-Regular.ttf);
+  font-family: Neon;
+  src: url(/src/images/fonts/BadScript-Regular.ttf);
 }
 @font-face {
   font-family: Marcellus;
@@ -32,12 +32,44 @@ $white: #f0f0f0;
   from {
     transform: rotate(90deg);
     scale: 1;
-    left: 0;
   }
   to {
     transform: rotate(0);
     scale: 0.7;
     translate: -85% 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  70% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 0;
+  }
+  81% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 1;
   }
 }
 
@@ -131,47 +163,47 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 
   &_title {
-    -webkit-text-stroke: 6px $gold;
-    position: relative;
-    top: 12vh;
-    font-family: LilitaOne;
+    animation: 2s appear linear;
+    color: #ffcb31;
+    top: 25vh;
+    position: absolute;
+    font-family: Neon;
     font-size: 120px;
     font-style: normal;
     line-height: normal;
-    letter-spacing: 2px;
-    color: transparent;
+    letter-spacing: -4px;
+
+    text-shadow: 0 0 30px #ffcb31, 0 0 40px #ffcb31;
 
     span {
-      opacity: 0;
-      -webkit-animation: 3s forwards opacity;
-      animation: 3s forwards opacity;
+      -webkit-animation: 2s infinite blink;
+      animation: 2s infinite blink;
 
       &:nth-child(1) {
-        animation-delay: 0.1s;
-      }
-      &:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      &:nth-child(3) {
-        animation-delay: 0.3s;
-      }
-      &:nth-child(4) {
         animation-delay: 0.4s;
       }
-      &:nth-child(5) {
-        animation-delay: 0.5s;
+      &:nth-child(2) {
+        animation-delay: 1.3s;
       }
-      &:nth-child(6) {
+      &:nth-child(3) {
         animation-delay: 0.6s;
       }
-      &:nth-child(7) {
+      &:nth-child(4) {
+        animation-delay: 0s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.9s;
+      }
+      &:nth-child(6) {
         animation-delay: 0.7s;
       }
+      &:nth-child(7) {
+        animation-delay: 1.3s;
+      }
       &:nth-child(8) {
-        animation-delay: 0.8s;
+        animation-delay: 1s;
       }
       &:nth-child(9) {
         animation-delay: 0.9s;
@@ -180,18 +212,22 @@ h4 {
   }
 
   &_picture {
+    bottom: -12vh;
+    top: 0;
     height: auto;
     position: sticky;
-    bottom: -15vh;
-    top: 0;
     animation: 1s movement linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * 5 * -1s);
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    will-change: transform;
   }
 
   &__second-slide {
+    position: relative;
+    bottom: -70vh;
+    right: 5vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -246,6 +282,7 @@ h4 {
       background-position: center;
       margin: 15px 0 !important;
       transition: all 0.2s ease-in-out;
+      opacity: 0.4;
 
       &:nth-child(1) {
         background-image: url(../images/header/swiper/Bullet1.png);
@@ -262,6 +299,7 @@ h4 {
       }
 
       &-active {
+        opacity: 1;
         background: transparent;
         background-position: center;
         background-repeat: no-repeat;
@@ -315,6 +353,9 @@ main {
     }
   }
 }
+.creator-info {
+  cursor: pointer;
+}
 .history {
   width: 100%;
   min-height: 100svh;
@@ -325,6 +366,11 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 5vh;
+
+  img {
+    height: auto;
+    width: 30vw;
+  }
 
   &_article {
     width: 60%;
@@ -485,7 +531,7 @@ main {
     }
   }
 }
-//TODO Footer style
+
 .footer {
   padding: 0 8vw 1vh 8vw;
   display: flex;
@@ -508,6 +554,40 @@ main {
       display: flex;
       flex-direction: column;
       gap: 1vh;
+
+      &__form {
+        width: 50vw;
+        display: flex;
+
+        &_email {
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border: 2px solid $gold;
+          background-color: transparent;
+          color: $white;
+          font-size: 1.2rem;
+          padding: 1vh 1vw;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &_submit {
+          border: 2px solid $gold;
+          background-color: $gold;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          padding: 0 2vw;
+          color: $white;
+          font-size: 1.5rem;
+          font-family: Marcellus;
+        }
+      }
     }
 
     &__social-media {
@@ -516,6 +596,16 @@ main {
         display: flex;
         list-style: none;
         gap: 3vw;
+
+        &_element {
+          width: 5vw;
+          height: auto;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
       }
     }
   }
