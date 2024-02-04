@@ -12,8 +12,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="icon" type="image/x-icon" href="/SaxPage/assets/logo-c_PDmleY.svg" />
-    <script type="module" crossorigin src="/SaxPage/assets/index-K0hnRp_m.js"></script>
-    <link rel="stylesheet" crossorigin href="/SaxPage/assets/index-Df04cm05.css">
+    <script type="module" crossorigin src="/SaxPage/assets/index-me4r7hs6.js"></script>
+    <link rel="stylesheet" crossorigin href="/SaxPage/assets/index-4V6vAiVM.css">
   </head>
   <body>
     <nav class="nav">
@@ -147,9 +147,9 @@
           were invented by a
           <span class="gold"> single individual</span>. The inventer,
           <a
-            class="creator-info"
-            onclick="CreatorInfo()"
-            title="Click to see more"
+            class="creator-info-link"
+            onmousemove="CreatorInfoShow()"
+            onmouseout="CreatorInfoHide()"
             ><span class="gold">Antoine-Joseph Sax (1814 - 1894)</span></a
           >, was known by his nickname "Adolphe Sax", that is why it is called
           the saxophone. History tells us that Adolphe Sax was a musical
@@ -162,8 +162,12 @@
           and in the 1840s he conceived the saxophone. This invention was
           <span class="gold">patented in Paris in 1846</span>.
         </p>
-        <script></script>
         <img src="/SaxPage/assets/deco-ovElvOoS.png" alt="deco" />
+        <div class="creator-info" id="creatorInfo">
+          <img src="/SaxPage/assets/Adolph_Sax-LsSJwPfG.png" />
+          <h2>Adolph Sax</h2>
+        </div>
+        <script src="./src/js/CreatorInfo.js"></script>
       </article>
       <div class="saxTypes" id="Types"></div>
     </main>
