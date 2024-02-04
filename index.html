@@ -147,9 +147,9 @@
           were invented by a
           <span class="gold"> single individual</span>. The inventer,
           <a
-            class="creator-info"
-            onclick="CreatorInfo()"
-            title="Click to see more"
+            class="creator-info-link"
+            onmousemove="CreatorInfoShow()"
+            onmouseout="CreatorInfoHide()"
             ><span class="gold">Antoine-Joseph Sax (1814 - 1894)</span></a
           >, was known by his nickname "Adolphe Sax", that is why it is called
           the saxophone. History tells us that Adolphe Sax was a musical
@@ -162,8 +162,12 @@
           and in the 1840s he conceived the saxophone. This invention was
           <span class="gold">patented in Paris in 1846</span>.
         </p>
-        <script></script>
         <img src="./src/images/history/deco.png" alt="deco" />
+        <div class="creator-info" id="creatorInfo">
+          <img src="./src/images/history/Adolph_Sax.png" />
+          <h2>Adolph Sax</h2>
+        </div>
+        <script src="./src/js/CreatorInfo.js"></script>
       </article>
       <div class="saxTypes" id="Types"></div>
     </main>
