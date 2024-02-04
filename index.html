@@ -3,14 +3,17 @@
   <head>
     <title>Saxophone</title>
     <meta charset="utf-8" />
+    <meta name="description" content="Portfolio webpage" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, React.js" />
+    <meta name="author" content="Daritork" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="icon" type="image/x-icon" href="/SaxPage/assets/logo-c_PDmleY.svg" />
-    <script type="module" crossorigin src="/SaxPage/assets/index-iHy36A4j.js"></script>
-    <link rel="stylesheet" crossorigin href="/SaxPage/assets/index-7Glz4uDX.css">
+    <script type="module" crossorigin src="/SaxPage/assets/index-K0hnRp_m.js"></script>
+    <link rel="stylesheet" crossorigin href="/SaxPage/assets/index-Df04cm05.css">
   </head>
   <body>
     <nav class="nav">
@@ -46,7 +49,9 @@
         class="header_picture"
         src="/SaxPage/assets/neonSax-zt_pvdr4.png"
         id="movingSax"
+        usemap="#workmap"
       />
+      <map name="workmap"> </map>
       <div class="header__second-slide">
         <div class="header__second-slide_swiper">
           <h2>Saxophone Parts</h2>
@@ -141,11 +146,15 @@
           The saxophone is one of the few instruments in wide use today that
           were invented by a
           <span class="gold"> single individual</span>. The inventer,
-          <span class="gold">Antoine-Joseph Sax (1814 - 1894)</span>, was known
-          by his nickname "Adolphe Sax", that is why it is called the saxophone.
-          History tells us that Adolphe Sax was a musical instrument designer
-          born in Dinant, Belgium who could play, deign and create many wind
-          instruments. His idea was to
+          <a
+            class="creator-info"
+            onclick="CreatorInfo()"
+            title="Click to see more"
+            ><span class="gold">Antoine-Joseph Sax (1814 - 1894)</span></a
+          >, was known by his nickname "Adolphe Sax", that is why it is called
+          the saxophone. History tells us that Adolphe Sax was a musical
+          instrument designer born in Dinant, Belgium who could play, deign and
+          create many wind instruments. His idea was to
           <span class="gold">
             create an instrument that combined the best qualities of a woodwind
             instrument with the best qualities of a brass instrument,
@@ -153,6 +162,7 @@
           and in the 1840s he conceived the saxophone. This invention was
           <span class="gold">patented in Paris in 1846</span>.
         </p>
+        <script></script>
         <img src="/SaxPage/assets/deco-ovElvOoS.png" alt="deco" />
       </article>
       <div class="saxTypes" id="Types"></div>
@@ -162,7 +172,17 @@
       <div class="footer__content">
         <form class="footer__content__subscription">
           <h3>Stay Connected</h3>
-          <div><input type="email" /> <input type="submit" /></div>
+          <div class="footer__content__subscription__form">
+            <input
+              class="footer__content__subscription__form_email"
+              placeholder="example@email.com"
+              type="email"
+            />
+            <input
+              class="footer__content__subscription__form_submit"
+              type="submit"
+            />
+          </div>
         </form>
         <div class="footer__content__social-media">
           <div class="footer__content__social-media__title">
@@ -174,26 +194,32 @@
           <ul class="footer__content__social-media__list">
             <li class="footer__content__social-media__list_element">
               <a href="https://github.com/Daritork" target="_blank"
-                ><img src="data:image/png;base64,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" />
+                ><img alt="GitHub link" src="data:image/png;base64,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" />
               </a>
             </li>
             <li class="footer__content__social-media__list_element">
               <a
                 href="https://linkedin.com/in/dmytro-diatlov-26aba7285"
                 target="_blank"
-                ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAYAAAAc0MJxAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARpSURBVHgB7ZxPSBxXHMe/77kNDQ24x55kQ89ioMcIiaxQitJ4VqjbXoqnxh6KntKclB5ae1HaQ6MXr2lBKYXYrWiPDYrnkMVTjivkkMM4L+87ZmSyzp8f5hl2dt8HhnVnnsJ89vfe7/eeO09BgHmManADt7TW95Qyd41BzZ6uopy0lcKBMcoe4W5lHH9IfknlXaQgVPW3YWjuo7xiimhprdZfvQo3rn+OVlajTFGmGQn6Ab0rqJOWgXlYqWM97WKqKCvp5zdR1HdoqBVVD+c7z18QddrUjxCaBvoatT5QD79KntHJN4wkL4mYhtmxLhKcR1Swg4aCegRPAjM/UMcKf4pEmb9QC6+ppv2xBk+Sttbmphqzr9HbD/UsvKQ0qkGAKKlFEXW6o55DIKr1Avj6R4PDZ1b1S5SW2sfAF7eBB18qVG8UNj+LquAJppRSj4taU9Kn35hSC+pk5BPg6W+qsJ0tlca0Ae5CwHervSWJsGds/G2KGypM6QGtRiDgz//Qk+weFrcZgLqj7QT3Fjy5GIUas16/zOXehaqGR4QXJcSLElKBY0ZHRzE9PY2hoaHo/fb2dnQcHx+jzDgVtbCwEB1JKG5ubg6Tk5OlluWs6zGKOiXFMLpWV1dRZpyKyoORFXfHMuJM1ODgYGEbL8oiGX9OTk5QVpyJYmbL4+joKDrKijNRm5ubWFtbS73GaJuZmUGZcVoeLC4uRlHDgT0esxhpFFjmbkeUXd0ULMjYpYa6qFnpmP0M+P374sU7P4UR4nwKc9WwxBgeHj7v2hz/2N2vums7E8VpysTEROb1/f19LC8vv3WO1XpebcWxLc6mLFhZ+fM16+8zofC4CpyJ4qecdRMkrc4qqtZ504ycpaUlUeUfH0wqriOs68coRl2RpCRsu7W1Bdd0taii7pwFoztrgn5ZuloUb/iyULJk/imlZ8sDSqIsV5RCFAdmZkxOg7gAyEFeMgm/TLfNouvrKNZIlJPMYiwFmC339vZyu1dcb7nIgF0dUfFkOu1GeS1rEp7E1RpYV4ti5OR1MUlx2ReiitavJOOUq8zX1aIkY8v7+s+OXz0Q4kUJ8aKEeFFCvCghXpQQL0qIFyXEixLiRQnxooR4UUK8KCH+uwf+uwdu8aKEeFFCvCghFNWWNBQ8UtrLtDVM9n4kSfhYaS9yZ6Q44xljDnQIswsBTKG9FlX88FkeFGELo0NGlGhbID7Z/f+vCvduo/RUPwIezCr881NxNBHb6l9lmqiGYfQ4v38SNJ2WLbZvau4SEYbmF3hSsW42+BqVB5VKtP+IKPv1Ga2gcrafVCSKUXUK8xCet+DGW9fHzqqC84LzWh0rofFdMIYukruTXRj2gyd6XSkziz7G1k0blXE0kucuTGEq42GjnyMriqQOSSR1rvfBOO7b/smty1roH9qnoZnnvaddzN9esolaEKChterl/aWi8oiZn0ktq5GsNAXHLkxxZyClMaKM4n4upd2w1A5CrRDY5azECjrIExTzGgn2nF0/bRcmAAAAAElFTkSuQmCC" />
+                ><img
+                  alt="LinkedIn link"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAYAAAAc0MJxAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARpSURBVHgB7ZxPSBxXHMe/77kNDQ24x55kQ89ioMcIiaxQitJ4VqjbXoqnxh6KntKclB5ae1HaQ6MXr2lBKYXYrWiPDYrnkMVTjivkkMM4L+87ZmSyzp8f5hl2dt8HhnVnnsJ89vfe7/eeO09BgHmManADt7TW95Qyd41BzZ6uopy0lcKBMcoe4W5lHH9IfknlXaQgVPW3YWjuo7xiimhprdZfvQo3rn+OVlajTFGmGQn6Ab0rqJOWgXlYqWM97WKqKCvp5zdR1HdoqBVVD+c7z18QddrUjxCaBvoatT5QD79KntHJN4wkL4mYhtmxLhKcR1Swg4aCegRPAjM/UMcKf4pEmb9QC6+ppv2xBk+Sttbmphqzr9HbD/UsvKQ0qkGAKKlFEXW6o55DIKr1Avj6R4PDZ1b1S5SW2sfAF7eBB18qVG8UNj+LquAJppRSj4taU9Kn35hSC+pk5BPg6W+qsJ0tlca0Ae5CwHervSWJsGds/G2KGypM6QGtRiDgz//Qk+weFrcZgLqj7QT3Fjy5GIUas16/zOXehaqGR4QXJcSLElKBY0ZHRzE9PY2hoaHo/fb2dnQcHx+jzDgVtbCwEB1JKG5ubg6Tk5OlluWs6zGKOiXFMLpWV1dRZpyKyoORFXfHMuJM1ODgYGEbL8oiGX9OTk5QVpyJYmbL4+joKDrKijNRm5ubWFtbS73GaJuZmUGZcVoeLC4uRlHDgT0esxhpFFjmbkeUXd0ULMjYpYa6qFnpmP0M+P374sU7P4UR4nwKc9WwxBgeHj7v2hz/2N2vums7E8VpysTEROb1/f19LC8vv3WO1XpebcWxLc6mLFhZ+fM16+8zofC4CpyJ4qecdRMkrc4qqtZ504ycpaUlUeUfH0wqriOs68coRl2RpCRsu7W1Bdd0taii7pwFoztrgn5ZuloUb/iyULJk/imlZ8sDSqIsV5RCFAdmZkxOg7gAyEFeMgm/TLfNouvrKNZIlJPMYiwFmC339vZyu1dcb7nIgF0dUfFkOu1GeS1rEp7E1RpYV4ti5OR1MUlx2ReiitavJOOUq8zX1aIkY8v7+s+OXz0Q4kUJ8aKEeFFCvCghXpQQL0qIFyXEixLiRQnxooR4UUK8KCH+uwf+uwdu8aKEeFFCvCghFNWWNBQ8UtrLtDVM9n4kSfhYaS9yZ6Q44xljDnQIswsBTKG9FlX88FkeFGELo0NGlGhbID7Z/f+vCvduo/RUPwIezCr881NxNBHb6l9lmqiGYfQ4v38SNJ2WLbZvau4SEYbmF3hSsW42+BqVB5VKtP+IKPv1Ga2gcrafVCSKUXUK8xCet+DGW9fHzqqC84LzWh0rofFdMIYukruTXRj2gyd6XSkziz7G1k0blXE0kucuTGEq42GjnyMriqQOSSR1rvfBOO7b/smty1roH9qnoZnnvaddzN9esolaEKChterl/aWi8oiZn0ktq5GsNAXHLkxxZyClMaKM4n4upd2w1A5CrRDY5azECjrIExTzGgn2nF0/bRcmAAAAAElFTkSuQmCC"
+                />
               </a>
             </li>
             <li class="footer__content__social-media__list_element">
               <a href="https://www.instagram.com/dimon_lucky_/" target="_blank"
-                ><img src="data:image/png;base64,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" />
+                ><img
+                  alt="Instagram link"
+                  src="data:image/png;base64,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"
+                />
               </a>
             </li>
           </ul>
         </div>
       </div>
       <p>
-        Designed by
+        Designed and developed by
         <a href="https://github.com/Daritork" target="_blank">@Daritork</a>
       </p>
     </footer>
