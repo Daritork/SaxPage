@@ -11,9 +11,50 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- //* CSS extra large screen-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/SaxPage/assets/stylesheet-_p6P679h.scss"
+      media="screen and (min-width: 1600px)"
+    />
+    <!-- //TODO CSS large screen-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/SaxPage/assets/stylesheet-large-screen-iCNBmhAp.scss"
+      media="screen and (min-width: 769px) and (max-width: 1599px)"
+    />
+    <!-- //TODO CSS PC screen-->
+    <!--<link
+      rel="stylesheet"
+      type="text/css"
+      href="src/sass/stylesheet-PC-screen.scss"
+      media="screen and (min-width: 1025px) and (max-width: 1200px)"
+    />-->
+    <!-- //TODO CSS Small screen screen-->
+    <!--<link
+      rel="stylesheet"
+      type="text/css"
+      href="src/sass/stylesheet-small-screen.scss"
+      media="screen and (min-width: 769px) and (max-width: 1024px)"
+    />-->
+    <!-- //TODO CSS Tablets screen-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/SaxPage/assets/stylesheet-tablets-5MP6qbeJ.scss"
+      media="screen and (max-width: 768px)"
+    />
+    <!-- //TODO CSS Mobile screen-->
+    <!--<link
+      rel="stylesheet"
+      type="text/css"
+      href="src/sass/stylesheet-mobile.scss"
+      media="screen and (min-width: 320px) and (max-width: 480px)"
+    />-->
     <link rel="icon" type="image/x-icon" href="/SaxPage/assets/logo-c_PDmleY.svg" />
-    <script type="module" crossorigin src="/SaxPage/assets/index-GFvHAiyk.js"></script>
-    <link rel="stylesheet" crossorigin href="/SaxPage/assets/index-cWyP9jSx.css">
+    <script type="module" crossorigin src="/SaxPage/assets/index-DeOG90Z8.js"></script>
   </head>
   <body>
     <nav class="nav">
@@ -44,14 +85,6 @@
         <span>n</span>
         <span>e</span>
       </div>
-      <img
-        alt="neon Alto Sax"
-        class="header_picture"
-        src="/SaxPage/assets/neonSax-zt_pvdr4.png"
-        id="movingSax"
-        usemap="#workmap"
-      />
-      <map name="workmap"> </map>
       <div class="header__second-slide">
         <div class="header__second-slide_swiper">
           <h2>Saxophone Parts</h2>
@@ -92,6 +125,12 @@
           </script>
         </div>
       </div>
+      <img
+        alt="neon Alto Sax"
+        class="picture"
+        src="/SaxPage/assets/neonSax-zt_pvdr4.png"
+        id="movingSax"
+      />
     </header>
     <main>
       <div class="famouns-brands">
@@ -146,15 +185,11 @@
           The saxophone is one of the few instruments in wide use today that
           were invented by a
           <span class="gold"> single individual</span>. The inventer,
-          <a
-            class="creator-info-link"
-            onmousemove="CreatorInfoShow()"
-            onmouseout="CreatorInfoHide()"
-            ><span class="gold">Antoine-Joseph Sax (1814 - 1894)</span></a
-          >, was known by his nickname "Adolphe Sax", that is why it is called
-          the saxophone. History tells us that Adolphe Sax was a musical
-          instrument designer born in Dinant, Belgium who could play, deign and
-          create many wind instruments. His idea was to
+          <span class="gold">Antoine-Joseph Sax (1814 - 1894)</span>, was known
+          by his nickname "Adolphe Sax", that is why it is called the saxophone.
+          History tells us that Adolphe Sax was a musical instrument designer
+          born in Dinant, Belgium who could play, deign and create many wind
+          instruments. His idea was to
           <span class="gold">
             create an instrument that combined the best qualities of a woodwind
             instrument with the best qualities of a brass instrument,
@@ -163,11 +198,6 @@
           <span class="gold">patented in Paris in 1846</span>.
         </p>
         <img src="/SaxPage/assets/deco-ovElvOoS.png" alt="deco" />
-        <div class="creator-info" id="creatorInfo">
-          <img src="/SaxPage/assets/Adolph_Sax-LsSJwPfG.png" />
-          <h2>Adolph Sax</h2>
-        </div>
-        <script src="./src/js/CreatorInfo.js"></script>
       </article>
       <div class="saxTypes" id="Types"></div>
     </main>
@@ -182,10 +212,9 @@
               placeholder="example@email.com"
               type="email"
             />
-            <input
-              class="footer__content__subscription__form_submit"
-              type="submit"
-            />
+            <button class="footer__content__subscription__form_submit">
+              Submit
+            </button>
           </div>
         </form>
         <div class="footer__content__social-media">
