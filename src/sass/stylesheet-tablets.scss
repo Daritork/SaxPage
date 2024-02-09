@@ -38,7 +38,7 @@ $white: #f0f0f0;
     transform: rotate(0);
     scale: 0.7;
     translate: -85% 0;
-    top: 15%;
+    top: 17%;
   }
 }
 
@@ -105,19 +105,19 @@ p {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 h1 {
-  font-size: 6.25rem;
+  font-size: 4rem;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .nav {
@@ -161,7 +161,6 @@ h4 {
 .header {
   padding-bottom: 3vh;
   width: 100vw;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,14 +171,12 @@ h4 {
     align-items: center;
     animation: 2s appear linear;
     color: #ffcb31;
-    /*top: 25vh;
-    position: relative;*/
     font-family: Neon;
     font-size: 120px;
     font-style: normal;
     line-height: normal;
     z-index: 1;
-    letter-spacing: 2vw;
+    letter-spacing: 1vw;
 
     span {
       text-shadow: 0 0 30px #ffcb31, 0 0 40px #ffcb31;
@@ -217,16 +214,15 @@ h4 {
   }
 
   &__second-slide {
+    height: 80vh;
     width: 100%;
-    height: 100vh;
-    margin: 10vh 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     &_swiper {
-      margin-right: 3vw;
-      width: 50vw;
+      margin: 0 2vw;
+      width: 100%;
       height: auto;
       aspect-ratio: 4 / 3;
       display: flex;
@@ -300,11 +296,12 @@ h4 {
   }
 }
 main {
+  overflow: hidden;
   width: 100%;
 }
 .famouns-brands {
   --total-marquee-items: 7;
-  width: calc(14.2vw * (var(--total-marquee-items)));
+  width: calc(30vw * (var(--total-marquee-items)));
   overflow: hidden;
   padding: 3vh 0;
   border-top: 2px dashed transparent;
@@ -333,7 +330,7 @@ main {
       width: 50%;
 
       img {
-        width: 10%;
+        width: 15vh;
         height: auto;
         display: block;
         margin: 0 10px;
@@ -384,8 +381,9 @@ main {
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 30px;
+    gap: 1vw;
 
     &__searchbar {
       max-width: 100%;
@@ -403,7 +401,7 @@ main {
         transition: all 0.3s linear;
         background: transparent;
         color: $white;
-        font-size: 1.2rem;
+        font-size: 1rem;
 
         &::placeholder {
           color: $white;
@@ -427,7 +425,7 @@ main {
         background-color: $gold;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-family: Marcellus;
       }
     }
@@ -457,7 +455,7 @@ main {
           cursor: pointer;
           padding: 1vh 2vw;
           font-family: Marcellus;
-          font-size: 1.4em;
+          font-size: 1.2rem;
           color: $white;
           transition: all 0.2s linear;
           border-radius: 0;
@@ -526,7 +524,7 @@ main {
   padding: 0 8vw 1vh 8vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 2vh;
 
   &_divide-line {
@@ -537,8 +535,10 @@ main {
 
   &__content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 3vh;
 
     &__subscription {
       display: flex;
@@ -557,7 +557,7 @@ main {
           border: 2px solid $gold;
           background-color: transparent;
           color: $white;
-          font-size: 1.2rem;
+          font-size: 1rem;
           padding: 1vh 1vw;
 
           &:focus {
@@ -594,7 +594,7 @@ main {
         gap: 3vw;
 
         &_element {
-          width: 4vw;
+          width: 8vw;
           height: auto;
 
           img {
@@ -623,7 +623,7 @@ main {
 }
 
 .picture {
-  width: 38vw;
+  /*width: 38vw;
   top: 2%;
   height: auto;
   position: absolute;
@@ -632,5 +632,6 @@ main {
   animation-delay: calc(var(--scroll) * 5 * -1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
-  will-change: transform;
+  will-change: transform;*/
+  display: none;
 }

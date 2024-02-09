@@ -11,8 +11,6 @@ import Bass from "./images/saxTypes/Bass.png";
 import Contrabass from "./images/saxTypes/Contrabass.png";
 import C from "./images/saxTypes/C -.png";
 
-//TODO add JSON file with Sax types for better vision
-
 function List() {
   //*Auto-Animate
   const [parent] = useAutoAnimate({ duration: 300 });
@@ -101,7 +99,7 @@ function List() {
     },
     {
       id: 10,
-      name: "C -",
+      name: "C - Melody",
       pitch: "C",
       heightCm: 64,
       heightIn: 25,
