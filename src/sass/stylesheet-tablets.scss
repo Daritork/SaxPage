@@ -75,7 +75,7 @@ $white: #f0f0f0;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   * {
     margin: 0;
     padding: 0;
@@ -624,16 +624,6 @@ $white: #f0f0f0;
   }
 
   .picture {
-    /*width: 38vw;
-    top: 2%;
-    height: auto;
-    position: absolute;
-    animation: 1s movement linear infinite;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * 5 * -1s);
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-    will-change: transform;*/
     display: none;
   }
 }
