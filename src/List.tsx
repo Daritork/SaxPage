@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+//* Images
 import Soprillo from "./images/saxTypes/Soprillo.png";
 import Sopranino from "./images/saxTypes/Sopranino.png";
 import Studio_Soprano from "./images/saxTypes/Studio Soprano.png";
@@ -13,7 +14,7 @@ import C from "./images/saxTypes/C -.png";
 
 function List() {
   //*Auto-Animate
-  const [parent] = useAutoAnimate({ duration: 300 });
+  const [parent] = useAutoAnimate({ duration: 200 });
   //*Saxophone List
   const [saxTypes] = useState<
     {
@@ -23,6 +24,8 @@ function List() {
       heightIn: number;
       pitch: string;
       imgPath: any;
+      writtenPitch?: any[];
+      soundingPitch?: any[];
     }[]
   >([
     {
@@ -108,9 +111,14 @@ function List() {
   ]);
 
   //* User content prefer
-  const [filter, setFilter] = useState<{ pitch: string; lengthIn: string }>({
+  const [filter, setFilter] = useState<{
+    pitch: string;
+    lengthIn: string;
+    searchTerm: string;
+  }>({
     pitch: "All",
     lengthIn: "cm",
+    searchTerm: "",
   });
 
   //*Search result
@@ -124,7 +132,6 @@ function List() {
       imgPath: any;
     }[]
   >([]);
-  const [searchTerm, setSearchTerm] = useState("");
 
   function handleSubmit(e: any) {
     e.preventDefault();
@@ -133,26 +140,47 @@ function List() {
   //*Filter Changers
   function onPitchChange(newPitch: string) {
     //*Filter settings change
-    setFilter({ pitch: newPitch, lengthIn: filter.lengthIn });
+    setFilter({
+      pitch: newPitch,
+      lengthIn: filter.lengthIn,
+      searchTerm: filter.searchTerm,
+    });
   }
 
   function onLengthInChange(newMeasures: string) {
     //*Filter settings change
-    setFilter({ pitch: filter.pitch, lengthIn: newMeasures });
+    setFilter({
+      pitch: filter.pitch,
+      lengthIn: newMeasures,
+      searchTerm: filter.searchTerm,
+    });
   }
 
   //* Search Function
   function onChangeSearch(e: any) {
-    setSearchTerm(e.target.value);
+    setFilter({
+      pitch: filter.pitch,
+      lengthIn: filter.lengthIn,
+      searchTerm: e.target.value,
+    });
   }
 
   //* Search method
   useEffect(() => {
-    const results: any[] = saxTypes.filter((type) =>
-      type.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setSearchResult(results);
-  }, [searchTerm]);
+    if (filter.pitch === "All") {
+      const results: any[] = saxTypes.filter((type) =>
+        type.name.toLowerCase().includes(filter.searchTerm.toLowerCase())
+      );
+      setSearchResult(results);
+    } else {
+      const results: any[] = saxTypes.filter(
+        (type) =>
+          type.name.toLowerCase().includes(filter.searchTerm.toLowerCase()) &&
+          type.pitch === filter.pitch
+      );
+      setSearchResult(results);
+    }
+  }, [filter]);
 
   return (
     <>
@@ -166,7 +194,7 @@ function List() {
             type="text"
             className="saxTypes__filter-fields__searchbar_input"
             placeholder="Search Name"
-            value={searchTerm}
+            value={filter.searchTerm}
             onChange={(e) => onChangeSearch(e)}
           />
           <span className="saxTypes__filter-fields__searchbar_span">
@@ -251,6 +279,10 @@ function List() {
                           ? saxType.heightCm + " cm"
                           : saxType.heightIn + " in"}
                       </h4>
+                    </li>
+                    <li>
+                      <h4>Written Pitch:</h4>
+                      <div id="output"></div>
                     </li>
                   </ul>
                 </div>

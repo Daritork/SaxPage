@@ -302,7 +302,7 @@ $white: #f0f0f0;
   }
   .famouns-brands {
     --total-marquee-items: 7;
-    width: calc(30vw * (var(--total-marquee-items)));
+    width: calc(185px * (var(--total-marquee-items)));
     overflow: hidden;
     padding: 3vh 0;
     border-top: 2px dashed transparent;
@@ -361,7 +361,7 @@ $white: #f0f0f0;
     }
 
     &_article {
-      width: 60%;
+      width: 70%;
 
       .gold {
         color: $gold;
@@ -529,7 +529,7 @@ $white: #f0f0f0;
     gap: 2vh;
 
     &_divide-line {
-      height: 5px;
+      height: 4px;
       background-color: $gold;
       border: 0;
     }
@@ -595,7 +595,7 @@ $white: #f0f0f0;
           gap: 3vw;
 
           &_element {
-            width: 8vw;
+            width: 6vw;
             height: auto;
 
             img {
