@@ -4,25 +4,18 @@
     <title>Saxophone</title>
     <meta charset="utf-8" />
     <meta name="description" content="Portfolio webpage" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, React.js" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, React.js, Portfolio"
+    />
     <meta name="author" content="Daritork" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- //* CSS extra large screen-->
+    <!-- //* CSS -->
     <link rel="stylesheet" type="text/css" href="./src/sass/stylesheet.scss" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./src/sass/stylesheet-large-screen.scss"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./src/sass/stylesheet-tablets.scss"
-    />
     <link rel="icon" type="image/x-icon" href="./src/images/nav/logo.svg" />
   </head>
   <body>
@@ -96,12 +89,17 @@
       </div>
       <img
         alt="neon Alto Sax"
-        class="picture"
+        class="picture fixed"
         src="/src/images/header/neonSax.png"
         id="movingSax"
       />
       <script
         src="src/js/Saxmove.js"
+        type="module"
+        media="screen and (min-width: 1200px)"
+      ></script>
+      <script
+        src="src/js/resize.js"
         type="module"
         media="screen and (min-width: 1200px)"
       ></script>
@@ -232,5 +230,7 @@
         <a href="https://github.com/Daritork" target="_blank">@Daritork</a>
       </p>
     </footer>
+    <div onclick="Scroll()" class="Scrollbutton"><h3>▲</h3></div>
+    <script src="src/js/scroll.js"></script>
   </body>
 </html>

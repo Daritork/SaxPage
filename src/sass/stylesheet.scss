@@ -30,15 +30,16 @@ $white: #f0f0f0;
 
 @keyframes movement {
   from {
+    top: var(--topSpace);
     transform: rotate(90deg);
     scale: 1;
-    top: 2%;
+    translate: 0 30px;
   }
   to {
+    top: calc(var(--topSpace) + 2vh);
     transform: rotate(0);
     scale: 0.7;
-    translate: -85% 0;
-    top: 12%;
+    translate: -65% 0%;
   }
 }
 
@@ -105,19 +106,19 @@ p {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 1.5rem, 2rem);
 }
 h1 {
-  font-size: 6.25rem;
+  font-size: clamp(4rem, 5rem, 6.25rem);
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 2.35rem, 2.5rem);
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 1.65rem, 1.8rem);
 }
 h4 {
-  font-size: 1.2rem;
+  font-size: clamp(1.3rem, 1.35rem, 1.4rem);
 }
 
 .nav {
@@ -159,8 +160,7 @@ h4 {
 }
 
 .header {
-  padding-bottom: 3vh;
-  width: 100vw;
+  min-height: 200vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -172,12 +172,14 @@ h4 {
     align-items: center;
     animation: 2s appear linear;
     color: #ffcb31;
+    top: var(--titleTopSpace);
+    position: relative;
     font-family: Neon;
-    font-size: 120px;
+    font-size: var(--titleSize);
     font-style: normal;
     line-height: normal;
     z-index: 1;
-    letter-spacing: 2vw;
+    letter-spacing: 20px;
 
     span {
       text-shadow: 0 0 30px #ffcb31, 0 0 40px #ffcb31;
@@ -216,7 +218,7 @@ h4 {
 
   &__second-slide {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     margin: 10vh 0;
     display: flex;
     align-items: center;
@@ -262,10 +264,11 @@ h4 {
     }
 
     .swiper-pagination-bullet {
-      width: 63px;
-      height: 63px;
+      width: 4.5vw;
+      height: 4.5vw;
       border: 2px dashed $gold;
       background: transparent;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       margin: 15px 0 !important;
@@ -515,10 +518,6 @@ main {
 
       &_list {
         list-style: none;
-
-        li {
-          margin-bottom: 1vh;
-        }
       }
     }
   }
@@ -625,14 +624,40 @@ main {
 }
 
 .picture {
-  width: 38vw;
-  top: 2%;
+  width: 36vw;
   height: auto;
-  position: absolute;
-  animation: 1s movement linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * 5 * -1s);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  will-change: transform;
+
+  &.fixed {
+    transform: rotate(90deg);
+    translate: 0% 0;
+    position: fixed;
+    animation: 1s movement linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    will-change: transform;
+  }
+
+  &.absolute {
+    translate: -65% 0%;
+    top: var(--absoluteTop);
+    scale: 0.7;
+    position: absolute;
+  }
+}
+
+.Scrollbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  border: 2px $gold solid;
+  color: #f0f0f0;
+  position: fixed;
+  bottom: 4vh;
+  left: 4vh;
+  transition: all 0.5s ease-in-out;
 }
