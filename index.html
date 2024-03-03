@@ -25,13 +25,16 @@
       /></a>
       <ul class="nav__links navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#Welcome">Welcome</a>
+          <a class="nav-link" id="scrollToWelcome">Welcome</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#History">History</a>
+          <a class="nav-link" id="scrollToSaxophoneParts">Saxophone Parts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Types">Types of Sax</a>
+          <a class="nav-link" id="scrollToHistory">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="scrollToTypesOfSax">Types of Sax</a>
         </li>
       </ul>
     </nav>
@@ -221,7 +224,7 @@
         <a href="https://github.com/Daritork" target="_blank">@Daritork</a>
       </p>
     </footer>
-    <div onclick="Scroll()" class="Scrollbutton"><h3>▲</h3></div>
-    <script type="module" src="src/js/scroll.js"></script>
+    <button id="scroll" onclick="Scroll()" class="Scrollbutton">▲</button>
   </body>
+  <script src="src/js/scroll.js"></script>
 </html>
