@@ -16,8 +16,8 @@
     />
     <!-- //* CSS -->
     <link rel="icon" type="image/x-icon" href="/SaxPage/assets/logo-c_PDmleY.svg" />
-    <script type="module" crossorigin src="/SaxPage/assets/index-qkWdzkSw.js"></script>
-    <link rel="stylesheet" crossorigin href="/SaxPage/assets/index-Bjakc_cJ.css">
+    <script type="module" crossorigin src="/SaxPage/assets/index-xetqPR8f.js"></script>
+    <link rel="stylesheet" crossorigin href="/SaxPage/assets/index-Il_YcP3f.css">
   </head>
   <body>
     <nav class="nav">
@@ -26,13 +26,16 @@
       /></a>
       <ul class="nav__links navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#Welcome">Welcome</a>
+          <a class="nav-link" id="scrollToWelcome">Welcome</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#History">History</a>
+          <a class="nav-link" id="scrollToSaxophoneParts">Saxophone Parts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Types">Types of Sax</a>
+          <a class="nav-link" id="scrollToHistory">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="scrollToTypesOfSax">Types of Sax</a>
         </li>
       </ul>
     </nav>
@@ -219,6 +222,7 @@
         <a href="https://github.com/Daritork" target="_blank">@Daritork</a>
       </p>
     </footer>
-    <div onclick="Scroll()" class="Scrollbutton"><h3>▲</h3></div>
+    <button id="scroll" onclick="Scroll()" class="Scrollbutton">▲</button>
   </body>
+  <script src="src/js/scroll.js"></script>
 </html>
