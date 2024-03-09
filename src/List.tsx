@@ -11,6 +11,16 @@ import Baritone from "./images/saxTypes/Baritone.png";
 import Bass from "./images/saxTypes/Bass.png";
 import Contrabass from "./images/saxTypes/Contrabass.png";
 import C from "./images/saxTypes/C -.png";
+//*PichesInfo
+import P_Soprillo from "./images/saxTypes/pitches/Soprillo.svg";
+import P_Sopranino from "./images/saxTypes/pitches/Sopranino.svg";
+import P_Soprano from "./images/saxTypes/pitches/Soprano.svg";
+import P_Alto from "./images/saxTypes/pitches/Alto.svg";
+import P_Tenor from "./images/saxTypes/pitches/Tenor.svg";
+import P_Baritone from "./images/saxTypes/pitches/Baritone.svg";
+import P_Bass from "./images/saxTypes/pitches/Bass.svg";
+import P_Contrabass from "./images/saxTypes/pitches/Contrabass.svg";
+import P_C from "./images/saxTypes/pitches/C.svg";
 
 function List() {
   //*Auto-Animate
@@ -24,8 +34,7 @@ function List() {
       heightIn: number;
       pitch: string;
       imgPath: any;
-      writtenPitch?: any[];
-      soundingPitch?: any[];
+      pitchInfo: any;
     }[]
   >([
     {
@@ -35,6 +44,7 @@ function List() {
       heightCm: 33,
       heightIn: 13,
       imgPath: Soprillo,
+      pitchInfo: P_Soprillo,
     },
     {
       id: 2,
@@ -43,6 +53,7 @@ function List() {
       heightCm: 68,
       heightIn: 27,
       imgPath: Sopranino,
+      pitchInfo: P_Sopranino,
     },
     {
       id: 3,
@@ -51,6 +62,7 @@ function List() {
       heightCm: 71,
       heightIn: 28,
       imgPath: Studio_Soprano,
+      pitchInfo: P_Soprano,
     },
     {
       id: 4,
@@ -59,6 +71,7 @@ function List() {
       heightCm: 46,
       heightIn: 18,
       imgPath: Curved_Soprano,
+      pitchInfo: P_Soprano,
     },
     {
       id: 5,
@@ -67,6 +80,7 @@ function List() {
       heightCm: 74,
       heightIn: 29,
       imgPath: Alto,
+      pitchInfo: P_Alto,
     },
     {
       id: 6,
@@ -75,6 +89,7 @@ function List() {
       heightCm: 94,
       heightIn: 37,
       imgPath: Tenor,
+      pitchInfo: P_Tenor,
     },
     {
       id: 7,
@@ -83,6 +98,7 @@ function List() {
       heightCm: 132,
       heightIn: 52,
       imgPath: Baritone,
+      pitchInfo: P_Baritone,
     },
     {
       id: 8,
@@ -91,6 +107,7 @@ function List() {
       heightCm: 158,
       heightIn: 62,
       imgPath: Bass,
+      pitchInfo: P_Bass,
     },
     {
       id: 9,
@@ -99,6 +116,7 @@ function List() {
       heightCm: 200,
       heightIn: 79,
       imgPath: Contrabass,
+      pitchInfo: P_Contrabass,
     },
     {
       id: 10,
@@ -107,6 +125,7 @@ function List() {
       heightCm: 64,
       heightIn: 25,
       imgPath: C,
+      pitchInfo: P_C,
     },
   ]);
 
@@ -130,6 +149,7 @@ function List() {
       heightIn: number;
       pitch: string;
       imgPath: any;
+      pitchInfo: any;
     }[]
   >([]);
 
@@ -281,8 +301,10 @@ function List() {
                       </h4>
                     </li>
                     <li>
-                      <h4>Written Pitch:</h4>
-                      <div id="output"></div>
+                      <img
+                        alt={saxType.pitchInfo}
+                        src={saxType.pitchInfo}
+                      ></img>
                     </li>
                   </ul>
                 </div>

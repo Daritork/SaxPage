@@ -39,7 +39,7 @@ $white: #f0f0f0;
     top: calc(var(--topSpace) + 2vh);
     transform: rotate(0);
     scale: 0.7;
-    translate: -65% 0%;
+    translate: -75% 0%;
   }
 }
 
@@ -523,6 +523,13 @@ main {
 
       &_list {
         list-style: none;
+
+        img {
+          border-radius: 20px;
+          width: 10vw;
+          height: auto;
+          background-color: #f0f0f0;
+        }
       }
     }
   }
@@ -645,7 +652,7 @@ main {
   }
 
   &.absolute {
-    translate: -65% 0%;
+    translate: -75% 0%;
     top: var(--absoluteTop);
     scale: 0.7;
     position: absolute;
@@ -658,10 +665,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.5em;
-  height: 3.5em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
   border: 2px $gold solid;
+  font-size: 1.7em;
   color: #f0f0f0;
   position: fixed;
   bottom: 4vh;
