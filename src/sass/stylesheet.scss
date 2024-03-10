@@ -499,8 +499,8 @@ main {
   &__list {
     width: 100%;
     display: grid;
-    gap: 8vw;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4vw;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
     &_no-items {
       height: 70vh;
@@ -511,32 +511,74 @@ main {
     }
 
     &__item {
+      border: 2px solid transparent;
+      padding: 2vh 0;
       display: flex;
       gap: 2vh;
       flex-direction: column;
       align-items: center;
+      border-radius: 30px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border: 2px solid $gold;
+      }
+
+      .info-but {
+        background: transparent;
+        outline: none;
+        border: 0;
+        align-self: flex-end;
+        position: relative;
+        right: 2vh;
+        cursor: pointer;
+      }
 
       img {
         height: 40vh;
         width: auto;
       }
+    }
+  }
 
-      &_list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        height: 100%;
+  .info-box {
+    transform: translate(-50%, -50%);
+    position: fixed;
+    padding: 3vh 2vw;
+    background: #141414;
+    border-radius: 30px;
+    border: 2px solid $gold;
+    top: 50%;
+    left: -50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
 
-        img {
-          border-radius: 20px;
-          max-width: 250px;
-          height: auto;
-          background-color: #f0f0f0;
-        }
+    button {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    &_list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1vh;
+
+      img {
+        border-radius: 20px;
+        max-width: 250px;
+        height: auto;
+        background-color: #f0f0f0;
       }
     }
+  }
+  .info-box.active {
+    left: 50%;
   }
 }
 

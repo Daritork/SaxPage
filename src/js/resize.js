@@ -28,6 +28,7 @@ function myFunction() {
       "px"
   );
 }
+
 //? Change Properties on resize */
 window.addEventListener("resize", () => {
   //? Finds a "top" Property for a picture to be always in center */
