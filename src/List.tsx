@@ -351,8 +351,8 @@ function List() {
           <button onClick={() => infoBox(saxType.id)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="3em"
-              height="3em"
+              width="4em"
+              height="4em"
               viewBox="0 0 24 24"
             >
               <path
@@ -361,25 +361,30 @@ function List() {
               />
             </svg>
           </button>
-          <h2>
-            <u>{saxType.name}</u>
-          </h2>
-          <ul className="info-box_list">
-            <li>
-              <h4>Pitch: {saxType.pitch}</h4>
-            </li>
-            <li>
-              <h4>
-                Height: ~
-                {filter.lengthIn === "cm"
-                  ? saxType.heightCm + " cm"
-                  : saxType.heightIn + " in"}
-              </h4>
-            </li>
-            <li>
-              <img alt={saxType.pitchInfo} src={saxType.pitchInfo}></img>
-            </li>
-          </ul>
+          <div className="info-box_columns">
+            <img alt={saxType.imgPath} src={saxType.imgPath}></img>
+            <div className="info-box_second">
+              <h2>
+                <u>{saxType.name}</u>
+              </h2>
+              <ul className="info-box_list">
+                <li>
+                  <h4>Pitch: {saxType.pitch}</h4>
+                </li>
+                <li>
+                  <h4>
+                    Height: ~
+                    {filter.lengthIn === "cm"
+                      ? saxType.heightCm + " cm"
+                      : saxType.heightIn + " in"}
+                  </h4>
+                </li>
+                <li>
+                  <img alt={saxType.pitchInfo} src={saxType.pitchInfo}></img>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       ))}
     </>

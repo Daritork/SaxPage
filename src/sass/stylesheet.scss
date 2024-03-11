@@ -309,9 +309,9 @@ main {
 }
 .famouns-brands {
   --total-marquee-items: 7;
-  width: calc(14.2vw * (var(--total-marquee-items)));
+  width: calc(300px * (var(--total-marquee-items)));
   overflow: hidden;
-  padding: 3vh 0;
+  padding: 4vh 0;
   border-top: 2px dashed transparent;
   border-bottom: 2px dashed transparent;
   border-image: repeating-linear-gradient(
@@ -332,13 +332,13 @@ main {
     span {
       display: flex;
       align-items: center;
-      gap: 3vw;
+      gap: 70px;
       overflow: hidden;
       float: left;
       width: 50%;
 
       img {
-        width: 10%;
+        width: 200px;
         height: auto;
         display: block;
         margin: 0 10px;
@@ -543,7 +543,7 @@ main {
   .info-box {
     transform: translate(-50%, -50%);
     position: fixed;
-    padding: 3vh 2vw;
+    padding: 3vh 2vw 4em 2vw;
     background: #141414;
     border-radius: 30px;
     border: 2px solid $gold;
@@ -554,11 +554,31 @@ main {
     gap: 2vh;
     align-items: center;
     transition: all 0.4s ease-in-out;
+    z-index: 3;
 
     button {
+      align-self: flex-end;
       background: transparent;
       border: 0;
       cursor: pointer;
+    }
+
+    &_columns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &_second {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3vh;
+
+      h1 {
+        text-align: center;
+      }
     }
 
     &_list {
