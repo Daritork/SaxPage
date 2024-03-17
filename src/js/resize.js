@@ -5,6 +5,7 @@ var topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
 
 //? Change Properties on resize */
 window.addEventListener("resize", () => {
+  topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
   //? Finds a "top" Property for a picture to be always in center */
   bodyStyle.setProperty(
     "--topSpace",

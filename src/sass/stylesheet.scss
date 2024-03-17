@@ -134,9 +134,18 @@ h4 {
   height: 10svh;
   backdrop-filter: blur(1px);
 
+  &_right-side {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   &__links {
     display: flex;
     gap: 2vw;
+    margin-right: 1.5vw;
 
     a {
       cursor: pointer;
@@ -157,6 +166,44 @@ h4 {
       font-family: Marcellus;
       list-style: none;
       font-size: 1.5rem;
+    }
+  }
+
+  &_divide-line {
+    height: 50%;
+    width: 3px;
+    background: $white;
+    margin: 0 0.5vw;
+  }
+
+  &__language-change {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.2vw;
+
+    &_changer {
+      cursor: pointer;
+      outline: 0;
+      padding: 1vh 1vw;
+      background: transparent;
+      color: $white;
+      font-size: clamp(1.2rem, 1.5rem, 2rem);
+      border: 0;
+      border-radius: 50%;
+      user-select: none;
+      appearance: none;
+
+      option {
+        background: #000;
+        border: 0px transparent;
+        border-radius: 20px;
+        outline: none;
+      }
+
+      option:checked {
+        display: none;
+      }
     }
   }
 }
@@ -548,7 +595,7 @@ main {
     border-radius: 30px;
     border: 2px solid $gold;
     top: 50%;
-    left: -50%;
+    left: -100%;
     display: flex;
     flex-direction: column;
     gap: 2vh;
