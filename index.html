@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="any">
+<html lang="en">
   <head>
     <title>Saxophone</title>
     <meta charset="utf-8" />
@@ -27,23 +27,36 @@
       <div class="nav_right-side">
         <ul class="nav__links navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" id="scrollToWelcome">Welcome</a>
+            <a
+              class="nav-link"
+              id="scrollToWelcome"
+              data-i18n="nav__link_welcome"
+              >Welcome</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="scrollToSaxophoneParts">Saxophone Parts</a>
+            <a
+              class="nav-link"
+              id="scrollToSaxophoneParts"
+              data-i18n="Sax-parts"
+              >Saxophone Parts</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="scrollToHistory">History</a>
+            <a class="nav-link" id="scrollToHistory" data-i18n="History"
+              >History</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="scrollToTypesOfSax">Types of Sax</a>
+            <a
+              class="nav-link"
+              id="scrollToTypesOfSax"
+              data-i18n="nav__link_sax-types"
+              >Types of Saxophone</a
+            >
           </li>
         </ul>
-        <form
-          id="languageChange"
-          class="nav__language-change"
-          onsubmit="return false"
-        >
+        <form id="languageChange" class="nav__language-change">
           <div class="nav_divide-line"></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,10 +74,19 @@
             form="languageChange"
             id="changer"
           >
-            <option value="en">English</option>
-            <option value="de">Deutsch</option>
-            <option value="ukr">Ukrainian</option>
-            <option value="ru">russian</option>
+            <option value="en">
+              <img alt="flag-england" src="./src/images/nav/en.png" />English
+            </option>
+            <option value="de">
+              <img alt="flag-germany" src="./src/images/nav/de.png" />Deutsch
+            </option>
+            <option value="ukr">
+              <img
+                alt="flag-ukrainian"
+                src="./src/images/nav/ukr.png"
+              />Українська
+            </option>
+            <option value="ru">русский язік</option>
           </select>
         </form>
       </div>
@@ -83,7 +105,7 @@
       </div>
       <div class="header__second-slide">
         <div class="header__second-slide_swiper">
-          <h2>Saxophone Parts</h2>
+          <h2 data-i18n="Sax-parts">Saxophone Parts</h2>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -178,8 +200,8 @@
         </div>
       </div>
       <article class="history" id="History">
-        <h1>History</h1>
-        <p class="history_article">
+        <h1 data-i18n="History">History</h1>
+        <p class="history_article" data-i18n="History_article">
           The saxophone is one of the few instruments in wide use today that
           were invented by a
           <span class="gold"> single individual</span>. The inventer,
@@ -259,6 +281,7 @@
       </p>
     </footer>
     <button id="scroll" class="Scrollbutton">▲</button>
+    <script type="module" src="src/js/langChange.js"></script>
   </body>
   <script type="module" src="src/js/scroll.js"></script>
 </html>

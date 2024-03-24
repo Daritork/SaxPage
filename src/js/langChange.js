@@ -1,37 +1,49 @@
-const changer = document.getElementById("languageChange");
-const enPage = document.getElementById("body-en");
-const dePage = document.getElementById("body-de");
-const ukrPage = document.getElementById("body-ukr");
-const ruPage = document.getElementById("body-ru");
+const changer = document.getElementById("changer");
+changer.onchange = async () => {
+  location.hash = changer.value;
+  changeLanguage(changer.value);
+  location.reload();
+};
 
-changer.addEventListener("onsubmit", languageChange);
-console.log("1");
-
-function languageChange() {
-  switch (changer.value) {
-    case "en":
-      enPage.style.display = "block";
-      dePage.style.display = "none";
-      ukrPage.style.display = "none";
-      ruPage.style.display = "none";
-      break;
-    case "de":
-      enPage.style.display = "none";
-      dePage.style.display = "block";
-      ukrPage.style.display = "none";
-      ruPage.style.display = "none";
-      break;
-    case "ukr":
-      enPage.style.display = "none";
-      dePage.style.display = "none";
-      ukrPage.style.display = "block";
-      ruPage.style.display = "none";
-      break;
-    case "ru":
-      enPage.style.display = "none";
-      dePage.style.display = "none";
-      ukrPage.style.display = "none";
-      ruPage.style.display = "block";
-      break;
-  }
+// Function to fetch language data
+async function fetchLanguageData(lang) {
+  const response = await fetch(`src/languages/${lang}.json`);
+  return response.json();
 }
+
+// Function to set the language preference
+function setLanguagePreference(lang) {
+  localStorage.setItem("language", lang);
+}
+
+// Function to update content based on selected language
+function updateContent(langData) {
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    element.textContent = langData[key];
+  });
+}
+
+// Function to change language
+async function changeLanguage(lang) {
+  await setLanguagePreference(lang);
+
+  const langData = await fetchLanguageData(lang);
+  updateContent(langData);
+}
+
+// Call updateContent() on page load
+window.addEventListener("DOMContentLoaded", async () => {
+  const userPreferredLanguage = localStorage.getItem("language") || "en";
+  const langData = await fetchLanguageData(userPreferredLanguage);
+
+  //? Updates <select> value
+  let a = window.location.hash.split("#"); //* Language option in searchbar
+  if (a != "") {
+    changer.value = a[1];
+  } else {
+    changer.value = "en";
+  }
+
+  updateContent(langData);
+});
