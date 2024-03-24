@@ -6,6 +6,14 @@ var topSpace;
 //? Change Properties on resize */
 window.addEventListener("resize", () => {
   topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
+  //? Mrquee pesenctage */
+  bodyStyle.setProperty(
+    "--marquee",
+    (
+      (100 * ((0.215 * window.innerWidth + 20) * 6)) /
+      window.innerWidth
+    ).toFixed(3) + "%"
+  );
   //? Finds a "top" Property for a picture to be always in center */
   bodyStyle.setProperty(
     "--topSpace",
@@ -32,7 +40,14 @@ window.addEventListener("resize", () => {
 window.onload = myFunction;
 function myFunction() {
   var topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
-  //*
+  //? Mrquee pesenctage */
+  bodyStyle.setProperty(
+    "--marquee",
+    (
+      (100 * ((0.2135 * window.innerWidth + 20) * 6)) /
+      window.innerWidth
+    ).toFixed(3) + "%"
+  );
   //? Finds a "top" Property for a picture to be always in center */
   bodyStyle.setProperty(
     "--topSpace",

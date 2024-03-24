@@ -6,8 +6,8 @@ $white: #f0f0f0;
   src: url(/src/images/fonts/BadScript-Regular.ttf);
 }
 @font-face {
-  font-family: Marcellus;
-  src: url(/src/images/fonts/MarcellusSC-Regular.ttf);
+  font-family: MainFont;
+  src: url(/src/images/fonts/ShantellSans-Regular.ttf);
 }
 
 @keyframes opacity {
@@ -24,7 +24,7 @@ $white: #f0f0f0;
     left: 0;
   }
   100% {
-    left: -100%;
+    left: calc(var(--marquee) * -1);
   }
 }
 
@@ -102,7 +102,7 @@ h5,
 h6,
 p {
   color: $white;
-  font-family: Marcellus;
+  font-family: MainFont;
 }
 
 p {
@@ -163,7 +163,7 @@ h4 {
     }
 
     li {
-      font-family: Marcellus;
+      font-family: MainFont;
       list-style: none;
       font-size: 1.5rem;
     }
@@ -193,6 +193,7 @@ h4 {
       border-radius: 50%;
       user-select: none;
       appearance: none;
+      font-family: MainFont;
 
       option {
         background: #000;
@@ -348,7 +349,6 @@ h4 {
         border: 2px solid $gold;
       }
     }
-    //*
   }
 }
 main {
@@ -356,7 +356,7 @@ main {
 }
 .famouns-brands {
   --total-marquee-items: 7;
-  width: calc(300px * (var(--total-marquee-items)));
+  width: 100%;
   overflow: hidden;
   padding: 4vh 0;
   border-top: 2px dashed transparent;
@@ -372,20 +372,21 @@ main {
 
   &__marquee {
     display: block;
-    width: 200%;
+    width: calc(((21vw + 20px) * var(--total-marquee-items)) * 2);
     position: relative;
     animation: marqueeLeft 25s linear infinite;
 
     span {
       display: flex;
       align-items: center;
-      gap: 70px;
+      gap: 3vw;
       overflow: hidden;
       float: left;
-      width: 50%;
+      width: calc((21vw + 20px) * --total-marquee-items);
+      margin-right: 3vw;
 
       img {
-        width: 200px;
+        width: 15vw;
         height: auto;
         display: block;
         margin: 0 10px;
@@ -480,7 +481,7 @@ main {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         font-size: 1.5rem;
-        font-family: Marcellus;
+        font-family: MainFont;
       }
     }
 
@@ -508,7 +509,7 @@ main {
           outline: none;
           cursor: pointer;
           padding: 1vh 2vw;
-          font-family: Marcellus;
+          font-family: MainFont;
           font-size: 1.4em;
           color: $white;
           transition: all 0.2s linear;
@@ -701,7 +702,7 @@ main {
           padding: 0 2vw;
           color: $white;
           font-size: 1.5rem;
-          font-family: Marcellus;
+          font-family: MainFont;
           cursor: pointer;
           transition: all 0.2s ease-in-out;
 
