@@ -21,6 +21,11 @@ import P_Baritone from "./images/saxTypes/pitches/Baritone.svg";
 import P_Bass from "./images/saxTypes/pitches/Bass.svg";
 import P_Contrabass from "./images/saxTypes/pitches/Contrabass.svg";
 import P_C from "./images/saxTypes/pitches/C.svg";
+//*JSON
+import en from "./languages/en.json";
+import de from "./languages/de.json";
+import ukr from "./languages/ukr.json";
+import ru from "./languages/ru.json";
 
 function List() {
   //*Auto-Animate

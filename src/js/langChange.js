@@ -7,7 +7,7 @@ changer.onchange = async () => {
 
 // Function to fetch language data
 async function fetchLanguageData(lang) {
-  const response = await fetch(`src/languages/${lang}.json`);
+  const response = await fetch(`./src/languages/${lang}.json`);
   return response.json();
 }
 
