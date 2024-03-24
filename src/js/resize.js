@@ -1,7 +1,7 @@
 //*consts
 const bodyStyle = document.body.style;
 const saxophone = document.getElementById("movingSax");
-var topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
+var topSpace;
 
 //? Change Properties on resize */
 window.addEventListener("resize", () => {
@@ -31,6 +31,7 @@ window.addEventListener("resize", () => {
 
 window.onload = myFunction;
 function myFunction() {
+  var topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
   //*
   //? Finds a "top" Property for a picture to be always in center */
   bodyStyle.setProperty(
