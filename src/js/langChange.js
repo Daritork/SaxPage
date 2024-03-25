@@ -1,3 +1,8 @@
+import "../languages/de.json";
+import "../languages/en.json";
+import "../languages/ukr.json";
+import "../languages/ru.json";
+
 const changer = document.getElementById("changer");
 changer.onchange = async () => {
   location.hash = changer.value;
