@@ -234,7 +234,7 @@ function List() {
 
   return (
     <>
-      <h1>Saxophone Types</h1>
+      <h1 data-i18n="Sax-types">Saxophone Types</h1>
       <form
         className="saxTypes__filter-fields"
         onSubmit={(e) => handleSubmit(e)}
@@ -247,7 +247,10 @@ function List() {
             value={filter.searchTerm}
             onChange={(e) => onChangeSearch(e)}
           />
-          <span className="saxTypes__filter-fields__searchbar_span">
+          <span
+            className="saxTypes__filter-fields__searchbar_span"
+            data-i18n="search_subtitle"
+          >
             Saxophone
           </span>
         </div>
@@ -340,7 +343,7 @@ function List() {
         </div>
       ) : (
         <div className="saxTypes__list_no-items">
-          <h2>🎷 No Items Found 🎷</h2>
+          <h2 data-i18n="No_items">🎷 No Items Found 🎷</h2>
         </div>
       )}
       {saxTypes.map((saxType) => (

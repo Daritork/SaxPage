@@ -2,6 +2,8 @@
   "nav__link_welcome": "Начало",
   "Sax-parts": "Составьляющие саксофона",
   "History": "История",
-  "nav__link_sax-types": "Виды саксофонов",
-  "History_article": "The saxophone is one of the few instruments in wide use today that were invented by a <span @class=\"gold\"> single individual</span>. The inventer, <span class=\"gold\">Antoine-Joseph Sax (1814 - 1894)</span>, was known by his nickname \"Adolphe Sax\", that is why it is called the saxophone. History tells us that Adolphe Sax was a musical instrument designer born in Dinant, Belgium who could play, design and create many wind instruments. His idea was to <span class=\"gold\"> create an instrument that combined the best qualities of a woodwind instrument with the best qualities of a brass instrument, </span> and in the 1840s he conceived the saxophone. This invention was <span class=\"gold\">patented in Paris in 1846</span>."
+  "Sax-types": "Виды саксофонов",
+  "History_article": "The saxophone is one of the few instruments in wide use today that were invented by a <span @class=\"gold\"> single individual</span>. The inventer, <span class=\"gold\">Antoine-Joseph Sax (1814 - 1894)</span>, was known by his nickname \"Adolphe Sax\", that is why it is called the saxophone. History tells us that Adolphe Sax was a musical instrument designer born in Dinant, Belgium who could play, design and create many wind instruments. His idea was to <span class=\"gold\"> create an instrument that combined the best qualities of a woodwind instrument with the best qualities of a brass instrument, </span> and in the 1840s he conceived the saxophone. This invention was <span class=\"gold\">patented in Paris in 1846</span>.",
+  "search_subtitle": "Саксофон",
+  "No_items": "🎷 Не найдено 🎷"
 }

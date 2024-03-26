@@ -12,8 +12,19 @@ changer.onchange = async () => {
 
 // Function to fetch language data
 async function fetchLanguageData(lang) {
-  const response = await fetch(`./src/languages/${lang}.json`);
-  return response.json();
+  if (lang === "de") {
+    const response = await fetch(`./src/languages/de.json`);
+    return response.json();
+  } else if (lang === "ukr") {
+    const response = await fetch(`./src/languages/ukr.json`);
+    return response.json();
+  } else if (lang === "ru") {
+    const response = await fetch(`./src/languages/ru.json`);
+    return response.json();
+  } else {
+    const response = await fetch(`./src/languages/en.json`);
+    return response.json();
+  }
 }
 
 // Function to set the language preference
