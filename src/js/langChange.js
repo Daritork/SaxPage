@@ -13,16 +13,20 @@ changer.onchange = async () => {
 // Function to fetch language data
 async function fetchLanguageData(lang) {
   if (lang === "de") {
-    const response = await fetch(`./src/languages/de.json`);
+    const response = await fetch(`https://api.jsonserve.com/4L1_Nn`);
+    //const response = await fetch(`./src/languages/de.json`);
     return response.json();
   } else if (lang === "ukr") {
-    const response = await fetch(`./src/languages/ukr.json`);
+    const response = await fetch(`https://api.jsonserve.com/aLYq74`);
+    //const response = await fetch(`./src/languages/ukr.json`);
     return response.json();
   } else if (lang === "ru") {
-    const response = await fetch(`./src/languages/ru.json`);
+    const response = await fetch(`https://api.jsonserve.com/cWYkCb`);
+    //const response = await fetch(`./src/languages/ru.json`);
     return response.json();
   } else {
-    const response = await fetch(`./src/languages/en.json`);
+    const response = await fetch(`https://api.jsonserve.com/WE-PbS`);
+    //const response = await fetch(`./src/languages/en.json`);
     return response.json();
   }
 }
