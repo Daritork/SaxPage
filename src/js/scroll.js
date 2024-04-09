@@ -1,31 +1,21 @@
-document.getElementById("scroll").addEventListener("click", Scroll);
+document
+  .getElementById("scroll")
+  .addEventListener("click", () => Scroll("#Welcome", true));
 document
   .querySelector("#scrollToWelcome")
-  .addEventListener("click", ScrollToWelcomeTrue);
+  .addEventListener("click", () => Scroll("#Welcome", true));
 document
   .querySelector("#scrollToSaxophoneParts")
-  .addEventListener("click", ScrollToWelcomeFalse);
+  .addEventListener("click", () => Scroll("#Welcome", false));
 document
   .querySelector("#scrollToHistory")
-  .addEventListener("click", ScrollToHistory);
+  .addEventListener("click", () => Scroll("#History", true));
 document
   .querySelector("#scrollToTypesOfSax")
-  .addEventListener("click", ScrollToTypesOfSax);
+  .addEventListener("click", () => Scroll("#Types", true));
 
-function Scroll() {
-  document.querySelector("#Welcome").scrollIntoView(true);
-}
-function ScrollToWelcomeTrue() {
-  document.querySelector("#Welcome").scrollIntoView(true);
-}
-function ScrollToWelcomeFalse() {
-  document.querySelector("#Welcome").scrollIntoView(false);
-}
-function ScrollToHistory() {
-  document.querySelector("#History").scrollIntoView(true);
-}
-function ScrollToTypesOfSax() {
-  document.querySelector("#Types").scrollIntoView(true);
+function Scroll(id, position) {
+  document.querySelector(id).scrollIntoView(position);
 }
 
 window.addEventListener("scroll", () => {

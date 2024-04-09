@@ -133,6 +133,9 @@ h4 {
   height: 10svh;
   height: 10vh;
   backdrop-filter: blur(1px);
+  // background-image: url("../images/nav/bgi.svg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   &_right-side {
     display: flex;
@@ -153,12 +156,20 @@ h4 {
       color: $white;
       transition: all 0.2s ease-in-out;
 
+      &::before {
+        content: "♪  ";
+      }
+
       &.active {
         color: $gold;
       }
 
       &:hover {
         color: $gold;
+
+        &::before {
+          content: "♫  ";
+        }
       }
     }
 
@@ -566,86 +577,50 @@ main {
       align-items: center;
       border-radius: 30px;
       transition: all 0.3s ease-in-out;
+      height: 50vh;
 
       &:hover {
-        border: 2px solid $gold;
+        border-top: 2px solid $gold;
+        border-bottom: 2px solid $gold;
+
+        & > .saxTypes__list__item_info-list {
+          transform: translateY(-110%);
+          opacity: 1;
+          visibility: visible;
+        }
       }
 
-      .info-but {
-        background: transparent;
-        outline: none;
-        border: 0;
-        align-self: flex-end;
+      &_info-list {
+        width: 100%;
+        background: #1414146b;
+        border-radius: 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5vh;
         position: relative;
-        right: 2vh;
-        cursor: pointer;
+        z-index: 3;
+        color: white;
+        transition: 0.5s;
+        transform: translateY(-70%);
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+
+        img {
+          border-radius: 20px;
+          max-width: 250px;
+          height: auto;
+          background-color: #f0f0f0;
+        }
       }
 
       img {
-        height: 40vh;
+        height: 90%;
         width: auto;
       }
     }
-  }
-
-  .info-box {
-    transform: translate(-50%, -50%);
-    position: fixed;
-    padding: 3vh 2vw 4em 2vw;
-    background: #141414;
-    border-radius: 30px;
-    border: 2px solid $gold;
-    top: 50%;
-    left: -100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    align-items: center;
-    transition: all 0.4s ease-in-out;
-    z-index: 3;
-
-    button {
-      align-self: flex-end;
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-    }
-
-    &_columns {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    &_second {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      gap: 3vh;
-
-      h1 {
-        text-align: center;
-      }
-    }
-
-    &_list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1vh;
-
-      img {
-        border-radius: 20px;
-        max-width: 250px;
-        height: auto;
-        background-color: #f0f0f0;
-      }
-    }
-  }
-  .info-box.active {
-    left: 50%;
   }
 }
 

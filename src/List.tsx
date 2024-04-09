@@ -214,24 +214,6 @@ function List() {
     }
   }, [filter]);
 
-  //** InfoBox methods */
-
-  function infoBox(itemId: any) {
-    setFilter({
-      pitch: filter.pitch,
-      lengthIn: filter.lengthIn,
-      searchTerm: filter.searchTerm,
-    });
-    searchResult.map((saxtype) => {
-      if (saxtype.id == itemId) {
-        saxtype.infoBox = !saxtype.infoBox;
-      } else {
-        saxtype.infoBox = false;
-      }
-      return saxtype;
-    });
-  }
-
   return (
     <>
       <h1 data-i18n="Sax-types">Saxophone Types</h1>
@@ -319,24 +301,27 @@ function List() {
             (saxType) =>
               (saxType.pitch === filter.pitch || filter.pitch === "All") && (
                 <div className="saxTypes__list__item" key={saxType.id}>
-                  <button
-                    className="info-but"
-                    onClick={() => infoBox(saxType.id)}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="4em"
-                      height="4em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="#fdbd01"
-                        d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8q0-.425-.288-.712T12 7q-.425 0-.712.288T11 8q0 .425.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"
-                      />
-                    </svg>
-                  </button>
-                  <img alt={saxType.imgPath} src={saxType.imgPath}></img>
                   <h3>{saxType.name + " Saxophone"}</h3>
+                  <img alt={saxType.imgPath} src={saxType.imgPath}></img>
+                  <ul className="saxTypes__list__item_info-list">
+                    <li>
+                      <h4>Pitch: {saxType.pitch}</h4>
+                    </li>
+                    <li>
+                      <h4>
+                        Height: ~
+                        {filter.lengthIn === "cm"
+                          ? saxType.heightCm + " cm"
+                          : saxType.heightIn + " in"}
+                      </h4>
+                    </li>
+                    <li>
+                      <img
+                        alt={saxType.pitchInfo}
+                        src={saxType.pitchInfo}
+                      ></img>
+                    </li>
+                  </ul>
                 </div>
               )
           )}
@@ -346,50 +331,6 @@ function List() {
           <h2 data-i18n="No_items">🎷 No Items Found 🎷</h2>
         </div>
       )}
-      {saxTypes.map((saxType) => (
-        <div
-          className={saxType.infoBox === false ? "info-box" : "info-box active"}
-          key={saxType.id + "Info"}
-        >
-          <button onClick={() => infoBox(saxType.id)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="4em"
-              height="4em"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="gray"
-                d="m8.4 16.308l3.6-3.6l3.6 3.6l.708-.708l-3.6-3.6l3.6-3.6l-.708-.708l-3.6 3.6l-3.6-3.6l-.708.708l3.6 3.6l-3.6 3.6zM12.003 21q-1.866 0-3.51-.708q-1.643-.709-2.859-1.924q-1.216-1.214-1.925-2.856Q3 13.87 3 12.003q0-1.866.708-3.51q.709-1.643 1.924-2.859q1.214-1.216 2.856-1.925Q10.13 3 11.997 3q1.866 0 3.51.708q1.643.709 2.859 1.924q1.216 1.214 1.925 2.856Q21 10.13 21 11.997q0 1.866-.708 3.51q-.709 1.643-1.924 2.859q-1.214 1.216-2.856 1.925Q13.87 21 12.003 21M12 20q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"
-              />
-            </svg>
-          </button>
-          <div className="info-box_columns">
-            <img alt={saxType.imgPath} src={saxType.imgPath}></img>
-            <div className="info-box_second">
-              <h2>
-                <u>{saxType.name}</u>
-              </h2>
-              <ul className="info-box_list">
-                <li>
-                  <h4>Pitch: {saxType.pitch}</h4>
-                </li>
-                <li>
-                  <h4>
-                    Height: ~
-                    {filter.lengthIn === "cm"
-                      ? saxType.heightCm + " cm"
-                      : saxType.heightIn + " in"}
-                  </h4>
-                </li>
-                <li>
-                  <img alt={saxType.pitchInfo} src={saxType.pitchInfo}></img>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      ))}
     </>
   );
 }

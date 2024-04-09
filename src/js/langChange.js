@@ -17,9 +17,14 @@ async function fetchLanguageData(lang) {
     //const response = await fetch(`./src/languages/de.json`);
     return response.json();
   } else if (lang === "ukr") {
-    const response = await fetch(`https://api.jsonserve.com/aLYq74`);
+    //const response = await fetch(`https://api.jsonserve.com/aLYq74`);
     //const response = await fetch(`./src/languages/ukr.json`);
-    return response.json();
+    fetch(`https://api.jsonserve.com/aLYq74`)
+      .then((res) => res.json())
+      .then((out) => {
+        console.log("Output: ", out);
+      })
+      .catch((err) => console.error(err));
   } else if (lang === "ru") {
     const response = await fetch(`https://api.jsonserve.com/cWYkCb`);
     //const response = await fetch(`./src/languages/ru.json`);
