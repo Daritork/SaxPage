@@ -1,10 +1,8 @@
-//*consts
-const bodyStyle = document.body.style;
-const saxophone = document.getElementById("movingSax");
-var topSpace;
-
 //? Change Properties on resize */
 window.addEventListener("resize", () => {
+  const bodyStyle = document.body.style;
+  const saxophone = document.getElementById("movingSax");
+  var topSpace;
   topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
   //? Mrquee pesenctage */
   bodyStyle.setProperty(
@@ -37,8 +35,10 @@ window.addEventListener("resize", () => {
   );
 });
 
-window.onload = myFunction;
-function myFunction() {
+window.onload = () => {
+  const bodyStyle = document.body.style;
+  const saxophone = document.getElementById("movingSax");
+  var topSpace;
   var topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
   //? Mrquee pesenctage */
   bodyStyle.setProperty(
@@ -69,4 +69,4 @@ function myFunction() {
     (2 * window.innerHeight - saxophone.offsetHeight - topSpace).toFixed(3) +
       "px"
   );
-}
+};

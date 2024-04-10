@@ -1,18 +1,20 @@
 document
   .getElementById("scroll")
   .addEventListener("click", () => Scroll("#Welcome", true));
-document
-  .querySelector("#scrollToWelcome")
-  .addEventListener("click", () => Scroll("#Welcome", true));
-document
-  .querySelector("#scrollToSaxophoneParts")
-  .addEventListener("click", () => Scroll("#Welcome", false));
-document
-  .querySelector("#scrollToHistory")
-  .addEventListener("click", () => Scroll("#History", true));
-document
-  .querySelector("#scrollToTypesOfSax")
-  .addEventListener("click", () => Scroll("#Types", true));
+window.addEventListener("load", () => {
+  document
+    .querySelector("#scrollToWelcome")
+    .addEventListener("click", () => Scroll("#Welcome", true));
+  document
+    .querySelector("#scrollToSaxophoneParts")
+    .addEventListener("click", () => Scroll("#Welcome", false));
+  document
+    .querySelector("#scrollToHistory")
+    .addEventListener("click", () => Scroll("#History", true));
+  document
+    .querySelector("#scrollToTypesOfSax")
+    .addEventListener("click", () => Scroll("#Types", true));
+});
 
 function Scroll(id, position) {
   document.querySelector(id).scrollIntoView(position);

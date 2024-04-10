@@ -1,28 +1,33 @@
 import { useEffect, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 //* Images
-import Soprillo from "./images/saxTypes/Soprillo.png";
-import Sopranino from "./images/saxTypes/Sopranino.png";
-import Studio_Soprano from "./images/saxTypes/Studio Soprano.png";
-import Curved_Soprano from "./images/saxTypes/Curved Soprano.png";
-import Alto from "./images/saxTypes/Alto.png";
-import Tenor from "./images/saxTypes/Tenor.png";
-import Baritone from "./images/saxTypes/Baritone.png";
-import Bass from "./images/saxTypes/Bass.png";
-import Contrabass from "./images/saxTypes/Contrabass.png";
-import C from "./images/saxTypes/C -.png";
+import Soprillo from "../images/saxTypes/Soprillo.png";
+import Sopranino from "../images/saxTypes/Sopranino.png";
+import Studio_Soprano from "../images/saxTypes/Studio Soprano.png";
+import Curved_Soprano from "../images/saxTypes/Curved Soprano.png";
+import Alto from "../images/saxTypes/Alto.png";
+import Tenor from "../images/saxTypes/Tenor.png";
+import Baritone from "../images/saxTypes/Baritone.png";
+import Bass from "../images/saxTypes/Bass.png";
+import Contrabass from "../images/saxTypes/Contrabass.png";
+import C from "../images/saxTypes/C -.png";
 //*PichesInfo
-import P_Soprillo from "./images/saxTypes/pitches/Soprillo.svg";
-import P_Sopranino from "./images/saxTypes/pitches/Sopranino.svg";
-import P_Soprano from "./images/saxTypes/pitches/Soprano.svg";
-import P_Alto from "./images/saxTypes/pitches/Alto.svg";
-import P_Tenor from "./images/saxTypes/pitches/Tenor.svg";
-import P_Baritone from "./images/saxTypes/pitches/Baritone.svg";
-import P_Bass from "./images/saxTypes/pitches/Bass.svg";
-import P_Contrabass from "./images/saxTypes/pitches/Contrabass.svg";
-import P_C from "./images/saxTypes/pitches/C.svg";
+import P_Soprillo from "../images/saxTypes/pitches/Soprillo.svg";
+import P_Sopranino from "../images/saxTypes/pitches/Sopranino.svg";
+import P_Soprano from "../images/saxTypes/pitches/Soprano.svg";
+import P_Alto from "../images/saxTypes/pitches/Alto.svg";
+import P_Tenor from "../images/saxTypes/pitches/Tenor.svg";
+import P_Baritone from "../images/saxTypes/pitches/Baritone.svg";
+import P_Bass from "../images/saxTypes/pitches/Bass.svg";
+import P_Contrabass from "../images/saxTypes/pitches/Contrabass.svg";
+import P_C from "../images/saxTypes/pitches/C.svg";
+
+import { useTranslation } from "react-i18next";
 
 function List() {
+  //* i18n
+  const { t } = useTranslation(["home", "main"]);
+
   //*Auto-Animate
   const [parent] = useAutoAnimate({ duration: 200 });
   //*Saxophone List
@@ -215,8 +220,8 @@ function List() {
   }, [filter]);
 
   return (
-    <>
-      <h1 data-i18n="Sax-types">Saxophone Types</h1>
+    <div className="saxTypes" id="Types">
+      <h1>{t("Sax-types")}</h1>
       <form
         className="saxTypes__filter-fields"
         onSubmit={(e) => handleSubmit(e)}
@@ -229,11 +234,8 @@ function List() {
             value={filter.searchTerm}
             onChange={(e) => onChangeSearch(e)}
           />
-          <span
-            className="saxTypes__filter-fields__searchbar_span"
-            data-i18n="search_subtitle"
-          >
-            Saxophone
+          <span className="saxTypes__filter-fields__searchbar_span">
+            {t("search_subtitle")}
           </span>
         </div>
         <div className="saxTypes__filter-fields__field">
@@ -328,10 +330,10 @@ function List() {
         </div>
       ) : (
         <div className="saxTypes__list_no-items">
-          <h2 data-i18n="No_items">🎷 No Items Found 🎷</h2>
+          <h2>{t("No_items")}</h2>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
