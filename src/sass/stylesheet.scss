@@ -133,9 +133,6 @@ h4 {
   height: 10svh;
   height: 10vh;
   backdrop-filter: blur(1px);
-  // background-image: url("../images/nav/bgi.svg");
-  // background-size: cover;
-  // background-repeat: no-repeat;
 
   &_right-side {
     display: flex;
@@ -311,19 +308,27 @@ h4 {
     }
 
     .swiper-slide {
+      width: 95%;
+      height: 100%;
       text-align: center;
       font-size: 18px;
       background: transparent;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
     }
 
     .swiper-slide img {
       display: block;
-      width: 100%;
-      height: 100%;
+      width: 70%;
+      height: 50%;
       object-fit: contain;
+    }
+
+    .swiper-slide p {
+      font-size: 2rem;
+      width: 80%;
     }
 
     .swiper-pagination-bullet {
@@ -428,10 +433,10 @@ main {
 
   &_article {
     width: 60%;
-
-    .gold {
-      color: $gold;
-    }
+  }
+  .gold {
+    width: 60%;
+    color: $gold;
   }
 }
 .saxTypes {
@@ -766,6 +771,7 @@ main {
   transition: all 0.3s ease-in-out;
   visibility: hidden;
   opacity: 0;
+  z-index: 9999;
 
   &:hover {
     background-color: $gold;

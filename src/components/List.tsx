@@ -40,7 +40,6 @@ function List() {
       pitch: string;
       imgPath: any;
       pitchInfo: any;
-      infoBox: boolean;
     }[]
   >([
     {
@@ -51,7 +50,6 @@ function List() {
       heightIn: 13,
       imgPath: Soprillo,
       pitchInfo: P_Soprillo,
-      infoBox: false,
     },
     {
       id: 2,
@@ -61,7 +59,6 @@ function List() {
       heightIn: 27,
       imgPath: Sopranino,
       pitchInfo: P_Sopranino,
-      infoBox: false,
     },
     {
       id: 3,
@@ -71,7 +68,6 @@ function List() {
       heightIn: 28,
       imgPath: Studio_Soprano,
       pitchInfo: P_Soprano,
-      infoBox: false,
     },
     {
       id: 4,
@@ -81,7 +77,6 @@ function List() {
       heightIn: 18,
       imgPath: Curved_Soprano,
       pitchInfo: P_Soprano,
-      infoBox: false,
     },
     {
       id: 5,
@@ -91,7 +86,6 @@ function List() {
       heightIn: 29,
       imgPath: Alto,
       pitchInfo: P_Alto,
-      infoBox: false,
     },
     {
       id: 6,
@@ -101,7 +95,6 @@ function List() {
       heightIn: 37,
       imgPath: Tenor,
       pitchInfo: P_Tenor,
-      infoBox: false,
     },
     {
       id: 7,
@@ -111,7 +104,6 @@ function List() {
       heightIn: 52,
       imgPath: Baritone,
       pitchInfo: P_Baritone,
-      infoBox: false,
     },
     {
       id: 8,
@@ -121,7 +113,6 @@ function List() {
       heightIn: 62,
       imgPath: Bass,
       pitchInfo: P_Bass,
-      infoBox: false,
     },
     {
       id: 9,
@@ -131,7 +122,6 @@ function List() {
       heightIn: 79,
       imgPath: Contrabass,
       pitchInfo: P_Contrabass,
-      infoBox: false,
     },
     {
       id: 10,
@@ -141,7 +131,6 @@ function List() {
       heightIn: 25,
       imgPath: C,
       pitchInfo: P_C,
-      infoBox: false,
     },
   ]);
 
@@ -166,7 +155,6 @@ function List() {
       pitch: string;
       imgPath: any;
       pitchInfo: any;
-      infoBox: boolean;
     }[]
   >([]);
 
@@ -230,7 +218,7 @@ function List() {
           <input
             type="text"
             className="saxTypes__filter-fields__searchbar_input"
-            placeholder="Search Name"
+            placeholder={t("filter_placeholder")}
             value={filter.searchTerm}
             onChange={(e) => onChangeSearch(e)}
           />
@@ -239,10 +227,10 @@ function List() {
           </span>
         </div>
         <div className="saxTypes__filter-fields__field">
-          <h3>Pitch:</h3>
+          <h3>{t("filter_pitch")}</h3>
           <div className="saxTypes__filter-fields__field_radios">
             <input
-              id="All"
+              id={t("filter_all")}
               type="radio"
               value={"All"}
               name="Pitch"
@@ -250,7 +238,7 @@ function List() {
               onChange={() => onPitchChange("All")}
             />
             <input
-              id="Es"
+              id={t("filter_Es")}
               type="radio"
               value={"Es"}
               name="Pitch"
@@ -258,7 +246,7 @@ function List() {
               onChange={() => onPitchChange("Es")}
             />
             <input
-              id="B"
+              id={t("filter_B")}
               type="radio"
               value={"B"}
               name="Pitch"
@@ -266,7 +254,7 @@ function List() {
               onChange={() => onPitchChange("B")}
             />
             <input
-              id="C"
+              id={t("filter_C")}
               type="radio"
               value={"C"}
               name="Pitch"
@@ -276,10 +264,10 @@ function List() {
           </div>
         </div>
         <div className="saxTypes__filter-fields__field">
-          <h3>Length measures:</h3>
+          <h3>{t("filter_length")}</h3>
           <div className="saxTypes__filter-fields__field_radios">
             <input
-              id="cm"
+              id={t("filter_cm")}
               type="radio"
               value={"cm"}
               name="lenght"
@@ -287,7 +275,7 @@ function List() {
               onChange={() => onLengthInChange("cm")}
             />
             <input
-              id="in"
+              id={t("filter_in")}
               type="radio"
               value={"in"}
               name="lenght"
@@ -307,11 +295,13 @@ function List() {
                   <img alt={saxType.imgPath} src={saxType.imgPath}></img>
                   <ul className="saxTypes__list__item_info-list">
                     <li>
-                      <h4>Pitch: {saxType.pitch}</h4>
+                      <h4>
+                        {t("filter_pitch")} {saxType.pitch}
+                      </h4>
                     </li>
                     <li>
                       <h4>
-                        Height: ~
+                        {t("height")} ~
                         {filter.lengthIn === "cm"
                           ? saxType.heightCm + " cm"
                           : saxType.heightIn + " in"}

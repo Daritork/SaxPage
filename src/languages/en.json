@@ -1,9 +1,36 @@
 {
   "nav__link_welcome": "Welcome",
+
   "Sax-parts": "Saxophone Parts",
+  "Body_title": "Body",
+  "Body_material": "Material: alloy composed of copper and zinc, and compared to iron",
+  "Mouthpiece_title": "Mouthpiece",
+  "Mouthpiece_material": "Material: Plastic / Ebonite / Crystal / Wood / Metal-Plated Brass / Metal-Stainless Steel",
+  "Reed_title": "Reed",
+  "Reed_material": "Material: Cane Plant / Plastic",
+  "Reed_strength": "Strength: from 1.5 to 5 (the lower the number, the thinner the reed)",
+
   "History": "History",
+  "History_article_1": "The saxophone is one of the few instruments in wide use today that were invented by a",
+  "History_article_span_1": " single individual",
+  "History_article_2": ". The inventer,",
+  "History_article_span_2": " Antoine-Joseph Sax (1814 - 1894)",
+  "History_article_3": ", was known by his nickname \"Adolphe Sax\", that is why it is called the saxophone. History tells us that Adolphe Sax was a musical instrument designer born in Dinant, Belgium who could play, design and create many wind instruments. His idea was to",
+  "History_article_span_3": " an instrument that combined the best qualities of a woodwind instrument with the best qualities of a brass instrument,",
+  "History_article_4": " and in the 1840s he conceived the saxophone. This invention was",
+  "History_article_span_4": " patented in Paris in 1846",
+
   "Sax-types": "Types of Saxophone",
-  "History_article": "The saxophone is one of the few instruments in wide use today that were invented by a single individual. The inventer, Antoine-Joseph Sax (1814 - 1894), was known by his nickname 'Adolphe Sax', that is why it is called the saxophone. History tells us that Adolphe Sax was a musical instrument designer born in Dinant, Belgium who could play, design and create many windinstruments. His idea was to create an instrument that combined the best qualities of a woodwind instrument with the best qualities of a brass instrument,and in the 1840s he conceived the saxophone. This invention waspatented in Paris in 1846.",
+  "filter_placeholder": "Search Name",
   "search_subtitle": "Saxophone",
+  "filter_pitch": "Pitch:",
+  "filter_all": "All",
+  "filter_Es": "Es",
+  "filter_B": "B",
+  "filter_C": "C",
+  "filter_length": "Length measurement:",
+  "filter_cm": "cm",
+  "filter_in": "in",
+  "height": "Height:",
   "No_items": "🎷 No Items Found 🎷"
 }

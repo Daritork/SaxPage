@@ -1,9 +1,36 @@
 {
   "nav__link_welcome": "Начало",
+
   "Sax-parts": "Составьляющие саксофона",
+  "Body_title": "Корпус",
+  "Body_material": "Материал: сплав, состоящий из меди и цинка, сравненимый с железом",
+  "Mouthpiece_title": "Мундштук",
+  "Mouthpiece_material": "Материал: пластик / эбонит / хрусталь / дерево / металлизированная латунь / металл - нержавеющая сталь",
+  "Reed_title": "Трость",
+  "Reed_material": "Материал: тростник / пластик",
+  "Reed_strength": "Жорсткость: от 1,5 до 5 (чем меньше номер, тем тоньше тростник)",
+
   "History": "История",
+  "History_article_1": "Саксофон - один из немногих інструментов широкоизпользуемых сегодня, который бул изобретён всего лиш",
+  "History_article_span_1": " одним человеком",
+  "History_article_2": ". Изобретатель",
+  "History_article_span_2": " Антуан Жозеф Сакс (1814 - 1894)",
+  "History_article_3": ", был известен по псевдонимом \"Адольф Сакс\", из-за чего инструмент и называеться саксофон. Согласно истории, Адольф Сакс родился в Динане, Бельгия, и занимался не только игрой, но и изготовлением и дизайном различных инструментов. Его главной идеей было создание",
+  "History_article_span_3": " инструмнта, который бы вмещал лучшие качества духових и деревянно-духовых инструментов",
+  "History_article_4": ". В 1840-ых годах, он изобрел саксофон, которий был",
+  "History_article_span_4": " запатентирован в Париже в 1846 году",
+
   "Sax-types": "Виды саксофонов",
-  "History_article": "The saxophone is one of the few instruments in wide use today that were invented by a <span @class=\"gold\"> single individual</span>. The inventer, <span class=\"gold\">Antoine-Joseph Sax (1814 - 1894)</span>, was known by his nickname \"Adolphe Sax\", that is why it is called the saxophone. History tells us that Adolphe Sax was a musical instrument designer born in Dinant, Belgium who could play, design and create many wind instruments. His idea was to <span class=\"gold\"> create an instrument that combined the best qualities of a woodwind instrument with the best qualities of a brass instrument, </span> and in the 1840s he conceived the saxophone. This invention was <span class=\"gold\">patented in Paris in 1846</span>.",
+  "filter_placeholder": "Поиск",
   "search_subtitle": "Саксофон",
+  "filter_pitch": "Тональность:",
+  "filter_all": "Все",
+  "filter_Es": "Ми♭",
+  "filter_B": "Си♭",
+  "filter_C": "До",
+  "filter_length": "Единицы измерения:",
+  "filter_cm": "см",
+  "filter_in": "дюймы",
+  "height": "Высота:",
   "No_items": "🎷 Не найдено 🎷"
 }

@@ -1,9 +1,36 @@
 {
   "nav__link_welcome": "Wilkommen",
-  "Sax-parts": "Saxophoneteile",
+
+  "Sax-parts": "Saxophon Teile",
+  "Body_title": "Korpus",
+  "Body_material": "Material: Legierung aus Kupfer und Zink, die mit Eisen verglichen wird",
+  "Mouthpiece_title": "Mundstück",
+  "Mouthpiece_material": "Material: Kunststoff / Ebonit / Kristall / Holz / Metallisiertes Messing / Metall - rostfreier Stahl",
+  "Reed_title": "Blatt",
+  "Reed_material": "Material: Schilfrohr / Kunststoff",
+  "Reed_strength": "Stärke: von 1.5 bis 5 (je niedriger die Zahl, desto dünner das Blatt)",
+
   "History": "Geschichte",
+  "History_article_1": "Saxophone ist eins von wenigen weltweit verbreiteten Instrumenten, die von",
+  "History_article_span_1": " eine einzelne Person",
+  "History_article_2": " entwicket wurden. Der Erfinder",
+  "History_article_span_2": " Antoine-Joseph Sax (1814 - 1894)",
+  "History_article_3": " war bekannt unter seinem Spitznamen \"Adolphe Sax\", deswegen heißt es auch Saxophone. Adolf Sax war ein Instrumentdesigner aus Dinant, Belgien, der unterschiedliche Blasinstrumente nicht nur spielen, sondern auch kreieren und gestallten konnte. Seine Idee war",
+  "History_article_span_3": " einen Instrument zu schaffen, das das Beste aus allen Holzblas- und Blasinstrumenten kombinieren würde",
+  "History_article_4": ", was er im Jahr 1840 geschaft hat. Die Idee wurde",
+  "History_article_span_4": " im Jahr 1846 in Paris patentiert",
+
   "Sax-types": "Saxophonearten",
-  "History_article": "The saxophone is one of the few instruments in wide use today that were invented by a <span @class=\"gold\"> single individual</span>. The inventer, <span class=\"gold\">Antoine-Joseph Sax (1814 - 1894)</span>, was known by his nickname \"Adolphe Sax\", that is why it is called the saxophone. History tells us that Adolphe Sax was a musical instrument designer born in Dinant, Belgium who could play, design and create many wind instruments. His idea was to <span class=\"gold\"> create an instrument that combined the best qualities of a woodwind instrument with the best qualities of a brass instrument, </span> and in the 1840s he conceived the saxophone. This invention was <span class=\"gold\">patented in Paris in 1846</span>.",
+  "filter_placeholder": "Name suchen",
   "search_subtitle": "Saxophone",
+  "filter_pitch": "Stimme:",
+  "filter_all": "Alle",
+  "filter_Es": "Es",
+  "filter_B": "H",
+  "filter_C": "C",
+  "filter_length": "Einheit:",
+  "filter_cm": "cm",
+  "filter_in": "in",
+  "height": "Hõhe:",
   "No_items": "🎷 Nichts gefunden 🎷"
 }
