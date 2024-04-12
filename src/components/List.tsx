@@ -222,9 +222,6 @@ function List() {
             value={filter.searchTerm}
             onChange={(e) => onChangeSearch(e)}
           />
-          <span className="saxTypes__filter-fields__searchbar_span">
-            {t("search_subtitle")}
-          </span>
         </div>
         <div className="saxTypes__filter-fields__field">
           <h3>{t("filter_pitch")}</h3>

@@ -7,7 +7,7 @@ $white: #f0f0f0;
 }
 @font-face {
   font-family: MainFont;
-  src: url(/src/images/fonts/ShantellSans-Regular.ttf);
+  src: url(/src/images/fonts/OldStandardTT-Regular.ttf);
 }
 
 @keyframes opacity {
@@ -34,12 +34,14 @@ $white: #f0f0f0;
     transform: rotate(90deg);
     scale: 1;
     translate: 0 30px;
+    opacity: 0.8;
   }
   to {
     top: calc(var(--topSpace) + 2vh);
     transform: rotate(0);
     scale: 0.7;
-    translate: -75% 0%;
+    translate: -95% 0%;
+    opacity: 1;
   }
 }
 
@@ -61,6 +63,7 @@ $white: #f0f0f0;
   }
   81% {
     opacity: 1;
+    color: color-mix(in srgb, #ffcb31 70%, transparent);
   }
   82% {
     opacity: 0;
@@ -70,6 +73,7 @@ $white: #f0f0f0;
   }
   92% {
     opacity: 0;
+    color: color-mix(in srgb, #ffcb31, $gold 98%);
   }
   92% {
     opacity: 1;
@@ -106,13 +110,13 @@ p {
 }
 
 p {
-  font-size: clamp(1.2rem, 1.5rem, 2rem);
+  font-size: clamp(1.2rem, 1.8rem, 2rem);
 }
 h1 {
   font-size: clamp(4rem, 5rem, 6.25rem);
 }
 h2 {
-  font-size: clamp(2rem, 2.35rem, 2.5rem);
+  font-size: clamp(2rem, 3rem, 2.5rem);
 }
 h3 {
   font-size: clamp(1.5rem, 1.65rem, 1.8rem);
@@ -125,22 +129,14 @@ h4 {
   z-index: 2000;
   top: 0;
   position: fixed;
-  padding: 0 2.5vw;
+  padding-left: 2.5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 10svh;
   height: 10vh;
-  backdrop-filter: blur(1px);
-
-  &_right-side {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-  }
+  backdrop-filter: blur(3px);
 
   &__links {
     display: flex;
@@ -165,7 +161,7 @@ h4 {
         color: $gold;
 
         &::before {
-          content: "♫  ";
+          content: "♫";
         }
       }
     }
@@ -372,6 +368,7 @@ main {
 }
 .famouns-brands {
   --total-marquee-items: 7;
+  user-select: none;
   width: 100%;
   overflow: hidden;
   padding: 4vh 0;
@@ -393,6 +390,7 @@ main {
     animation: marqueeLeft 25s linear infinite;
 
     span {
+      user-select: none;
       display: flex;
       align-items: center;
       gap: 3vw;
@@ -402,6 +400,7 @@ main {
       margin-right: 3vw;
 
       img {
+        user-select: none;
         width: 15vw;
         height: auto;
         display: block;
@@ -428,7 +427,7 @@ main {
 
   img {
     height: auto;
-    width: 30vw;
+    width: 20vw;
   }
 
   &_article {
@@ -467,8 +466,7 @@ main {
         padding: 2.2vh 1vw;
         border: 0;
         border: 2px solid $gold;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
+        border-radius: 10px;
         transition: all 0.3s linear;
         background: transparent;
         color: $white;
@@ -486,18 +484,6 @@ main {
         &:focus::placeholder {
           color: transparent;
         }
-      }
-
-      &_span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 1vw;
-        background-color: $gold;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        font-size: 1.5rem;
-        font-family: MainFont;
       }
     }
 
@@ -637,7 +623,7 @@ main {
   gap: 2vh;
 
   &_divide-line {
-    height: 5px;
+    height: 2px;
     background-color: $gold;
     border: 0;
   }
@@ -680,14 +666,15 @@ main {
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
           padding: 0 2vw;
-          color: $white;
+          color: #141414;
           font-size: 1.5rem;
           font-family: MainFont;
           cursor: pointer;
           transition: all 0.2s ease-in-out;
 
           &:hover {
-            border-color: color-mix(in srgb, $gold 40%, white);
+            background: transparent;
+            color: $gold;
           }
         }
       }
@@ -730,7 +717,7 @@ main {
 }
 
 .picture {
-  width: 36vw;
+  width: 30vw;
   height: auto;
 
   &.fixed {
@@ -746,7 +733,7 @@ main {
   }
 
   &.absolute {
-    translate: -75% 0%;
+    translate: -95% 0%;
     top: var(--absoluteTop);
     scale: 0.7;
     position: absolute;
@@ -754,16 +741,16 @@ main {
 }
 
 .Scrollbutton {
-  background-color: #141414;
+  border-color: $gold;
+  background-color: color-mix(in hsl, #141414 96%, $white);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5em;
-  height: 2.5em;
+  width: 7vh;
+  height: 7vh;
   border-radius: 50%;
-  border: 2px $gold solid;
-  font-size: 1.7em;
+  font-size: 40px;
   color: #f0f0f0;
   position: fixed;
   bottom: 4vh;
@@ -774,6 +761,6 @@ main {
   z-index: 9999;
 
   &:hover {
-    background-color: $gold;
+    color: $gold;
   }
 }

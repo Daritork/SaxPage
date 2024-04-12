@@ -1,7 +1,7 @@
 {
   "nav__link_welcome": "Начало",
 
-  "Sax-parts": "Составьляющие саксофона",
+  "Sax-parts": "Составьляющие",
   "Body_title": "Корпус",
   "Body_material": "Материал: сплав, состоящий из меди и цинка, сравненимый с железом",
   "Mouthpiece_title": "Мундштук",
@@ -20,9 +20,8 @@
   "History_article_4": ". В 1840-ых годах, он изобрел саксофон, которий был",
   "History_article_span_4": " запатентирован в Париже в 1846 году",
 
-  "Sax-types": "Виды саксофонов",
+  "Sax-types": "Виды",
   "filter_placeholder": "Поиск",
-  "search_subtitle": "Саксофон",
   "filter_pitch": "Тональность:",
   "filter_all": "Все",
   "filter_Es": "Ми♭",

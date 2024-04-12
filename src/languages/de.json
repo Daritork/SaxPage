@@ -1,7 +1,7 @@
 {
   "nav__link_welcome": "Wilkommen",
 
-  "Sax-parts": "Saxophon Teile",
+  "Sax-parts": "Teile",
   "Body_title": "Korpus",
   "Body_material": "Material: Legierung aus Kupfer und Zink, die mit Eisen verglichen wird",
   "Mouthpiece_title": "Mundstück",
@@ -11,18 +11,17 @@
   "Reed_strength": "Stärke: von 1.5 bis 5 (je niedriger die Zahl, desto dünner das Blatt)",
 
   "History": "Geschichte",
-  "History_article_1": "Saxophone ist eins von wenigen weltweit verbreiteten Instrumenten, die von",
-  "History_article_span_1": " eine einzelne Person",
+  "History_article_1": "Das Saxophone ist eins von wenigen weltweit verbreiteten Instrumenten, die von",
+  "History_article_span_1": " einer einzelner Person",
   "History_article_2": " entwicket wurden. Der Erfinder",
   "History_article_span_2": " Antoine-Joseph Sax (1814 - 1894)",
-  "History_article_3": " war bekannt unter seinem Spitznamen \"Adolphe Sax\", deswegen heißt es auch Saxophone. Adolf Sax war ein Instrumentdesigner aus Dinant, Belgien, der unterschiedliche Blasinstrumente nicht nur spielen, sondern auch kreieren und gestallten konnte. Seine Idee war",
-  "History_article_span_3": " einen Instrument zu schaffen, das das Beste aus allen Holzblas- und Blasinstrumenten kombinieren würde",
-  "History_article_4": ", was er im Jahr 1840 geschaft hat. Die Idee wurde",
+  "History_article_3": " war bekannt unter seinem Spitznamen \"Adolphe Sax\". Adolf Sax war ein Instrumentendesigner aus Dinant, Belgien, der unterschiedliche Blasinstrumente nicht nur spielen, sondern auch kreieren und gestallten konnte. Seine Idee, war",
+  "History_article_span_3": " ein Instrument zu schaffen, das die beste Eigenschaften aus allen Holzblas- und Blasinstrumenten kombinieren würde",
+  "History_article_4": "1840 hat er den Saxophone auf die Welt gebracht. Die Kontruktion wurde",
   "History_article_span_4": " im Jahr 1846 in Paris patentiert",
 
-  "Sax-types": "Saxophonearten",
+  "Sax-types": "Arten",
   "filter_placeholder": "Name suchen",
-  "search_subtitle": "Saxophone",
   "filter_pitch": "Stimme:",
   "filter_all": "Alle",
   "filter_Es": "Es",

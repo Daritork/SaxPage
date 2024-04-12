@@ -1,7 +1,7 @@
 {
   "nav__link_welcome": "Початок",
 
-  "Sax-parts": "Анатомія саксофону",
+  "Sax-parts": "Будова",
   "Body_title": "Корпус",
   "Body_material": "Матеріал: Сплав міді та цинку, схожий із залізом",
   "Mouthpiece_title": "Мундштук",
@@ -20,9 +20,8 @@
   "History_article_4": ". У 1840-их роках, він досяг поставленну мету і винайшов саксофон, який був потім",
   "History_article_span_4": " запантетований у 1846 у Парижі",
 
-  "Sax-types": "Види саксофонів",
+  "Sax-types": "Види",
   "filter_placeholder": "Шукати",
-  "search_subtitle": "Саксофон",
   "filter_pitch": "Тональність:",
   "filter_all": "Усі",
   "filter_Es": "Мі♭",

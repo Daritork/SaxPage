@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
     Math.min(
       (
         window.pageYOffset /
-        (window.innerHeight * 2 - window.innerHeight)
+        (window.innerHeight * 2 - window.innerHeight - 20)
       ).toFixed(4),
       1
     )

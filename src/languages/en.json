@@ -1,7 +1,7 @@
 {
   "nav__link_welcome": "Welcome",
 
-  "Sax-parts": "Saxophone Parts",
+  "Sax-parts": "Parts",
   "Body_title": "Body",
   "Body_material": "Material: alloy composed of copper and zinc, and compared to iron",
   "Mouthpiece_title": "Mouthpiece",
@@ -20,9 +20,8 @@
   "History_article_4": " and in the 1840s he conceived the saxophone. This invention was",
   "History_article_span_4": " patented in Paris in 1846",
 
-  "Sax-types": "Types of Saxophone",
-  "filter_placeholder": "Search Name",
-  "search_subtitle": "Saxophone",
+  "Sax-types": "Types",
+  "filter_placeholder": "Search name",
   "filter_pitch": "Pitch:",
   "filter_all": "All",
   "filter_Es": "Es",
