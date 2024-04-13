@@ -31,5 +31,10 @@
   "filter_cm": "cm",
   "filter_in": "in",
   "height": "Hõhe:",
-  "No_items": "🎷 Nichts gefunden 🎷"
+  "No_items": "🎷 Nichts gefunden 🎷",
+
+  "footer_email-title": "Vebunden bleiben",
+  "footer_email-submit": "Bestätigen",
+  "footer_socials": "Social Media",
+  "footer_text": "Designed und entwikelt von"
 }

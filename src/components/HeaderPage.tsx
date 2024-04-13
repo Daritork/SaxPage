@@ -2,6 +2,8 @@ import SaxBody from "../images/header/swiper/Body.png";
 import Mouthpiece from "../images/header/swiper/Mouthpiece.png";
 import Reed from "../images/header/swiper/Reed.png";
 import Saxophone from "../images/header/neonSax.png";
+import Sax_player from "../images/header/Player.png";
+import Sax_playerHand from "../images/header/PlayerHand.png";
 
 import { useTranslation } from "react-i18next";
 
@@ -42,17 +44,21 @@ const HeaderPage = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img alt="Sax Body" src={SaxBody} />
+              <img loading="lazy" alt="Sax Body" src={SaxBody} />
               <p>{t("Body_material")}</p>
               <h2>{t("Body_title")}</h2>
             </SwiperSlide>
             <SwiperSlide>
-              <img alt="Swiper Bullet 1 (Sax Mouthpiece)" src={Mouthpiece} />
+              <img
+                loading="lazy"
+                alt="Swiper Bullet 1 (Sax Mouthpiece)"
+                src={Mouthpiece}
+              />
               <p>{t("Mouthpiece_material")}</p>
               <h2>{t("Mouthpiece_title")}</h2>
             </SwiperSlide>
             <SwiperSlide>
-              <img alt="Swiper Bullet 1 (Sax Reed)" src={Reed} />
+              <img loading="lazy" alt="Swiper Bullet 1 (Sax Reed)" src={Reed} />
               <p>{t("Reed_material")}</p>
               <p>{t("Reed_strength")}</p>
               <h2>{t("Reed_title")}</h2>
@@ -61,11 +67,31 @@ const HeaderPage = () => {
         </div>
       </div>
       <img
+        loading="lazy"
         alt="neon Alto Sax"
         className="picture fixed"
         src={Saxophone}
         id="movingSax"
       />
+      <img
+        loading="lazy"
+        alt="Sax Player"
+        className="player"
+        src={Sax_player}
+      />
+      <img
+        loading="lazy"
+        alt="Sax Player"
+        className="player hand"
+        src={Sax_playerHand}
+      />
+      <div>
+        <h1 className="header_notes">♫</h1>
+        <h1 className="header_notes">♪</h1>
+        <h1 className="header_notes">♫</h1>
+        <h1 className="header_notes">♪</h1>
+        <h1 className="header_notes">♫</h1>
+      </div>
     </header>
   );
 };

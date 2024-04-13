@@ -10,7 +10,7 @@ window.addEventListener("scroll", () => {
       (
         window.pageYOffset /
         (window.innerHeight * 2 - window.innerHeight - 20)
-      ).toFixed(4),
+      ).toFixed(3),
       1
     )
   );

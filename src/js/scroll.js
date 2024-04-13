@@ -29,4 +29,14 @@ window.addEventListener("scroll", () => {
     document.querySelector(".Scrollbutton").style.visibility = "hidden";
     document.querySelector(".Scrollbutton").style.opacity = "0";
   }
+
+  if (bodyStyle.getPropertyValue("--scroll") > 0.92) {
+    document.querySelectorAll(".header_notes").forEach((el) => {
+      el.style.visibility = "visible";
+    });
+  } else {
+    document.querySelectorAll(".header_notes").forEach((el) => {
+      el.style.visibility = "hidden";
+    });
+  }
 });

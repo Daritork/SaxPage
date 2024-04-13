@@ -10,7 +10,7 @@ window.addEventListener("resize", () => {
     (
       (100 * ((0.215 * window.innerWidth + 20) * 6)) /
       window.innerWidth
-    ).toFixed(3) + "%"
+    ).toFixed(1) + "%"
   );
   //? Finds a "top" Property for a picture to be always in center */
   bodyStyle.setProperty(
@@ -21,7 +21,7 @@ window.addEventListener("resize", () => {
   bodyStyle.setProperty(
     "--titleSize",
     Math.min(
-      ((saxophone.offsetHeight - 0.1 * window.innerWidth - 220) / 4).toFixed(3),
+      ((saxophone.offsetHeight - 0.1 * window.innerWidth - 220) / 4).toFixed(1),
       150
     ) + "px"
   );
@@ -30,7 +30,7 @@ window.addEventListener("resize", () => {
   //? Finds a title "top" Property for absolute */
   bodyStyle.setProperty(
     "--absoluteTop",
-    (2 * window.innerHeight - saxophone.offsetHeight - topSpace).toFixed(3) +
+    (2 * window.innerHeight - saxophone.offsetHeight - topSpace).toFixed(1) +
       "px"
   );
 });
@@ -46,7 +46,7 @@ window.onload = () => {
     (
       (100 * ((0.2135 * window.innerWidth + 20) * 6)) /
       window.innerWidth
-    ).toFixed(3) + "%"
+    ).toFixed(1) + "%"
   );
   //? Finds a "top" Property for a picture to be always in center */
   bodyStyle.setProperty(
@@ -57,7 +57,7 @@ window.onload = () => {
   bodyStyle.setProperty(
     "--titleSize",
     Math.min(
-      ((saxophone.offsetHeight - 0.1 * window.innerWidth - 220) / 4).toFixed(3),
+      ((saxophone.offsetHeight - 0.1 * window.innerWidth - 220) / 4).toFixed(1),
       150
     ) + "px"
   );
@@ -66,7 +66,7 @@ window.onload = () => {
   //? Finds a title "top" Property for absolute */
   bodyStyle.setProperty(
     "--absoluteTop",
-    (2 * window.innerHeight - saxophone.offsetHeight - topSpace).toFixed(3) +
+    (2 * window.innerHeight - saxophone.offsetHeight - topSpace).toFixed(1) +
       "px"
   );
 };

@@ -10,15 +10,6 @@ $white: #f0f0f0;
   src: url(/src/images/fonts/OldStandardTT-Regular.ttf);
 }
 
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes marqueeLeft {
   0% {
     left: 0;
@@ -38,9 +29,9 @@ $white: #f0f0f0;
   }
   to {
     top: calc(var(--topSpace) + 2vh);
-    transform: rotate(0);
+    transform: rotate(-20deg);
     scale: 0.7;
-    translate: -95% 0%;
+    translate: -90% 0%;
     opacity: 1;
   }
 }
@@ -219,6 +210,36 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &_notes {
+    position: absolute;
+    font-size: 4vw;
+    top: var(--absoluteTop);
+    color: $white;
+    animation: infinite 2s blink;
+    opacity: 0;
+
+    &:nth-child(1) {
+      translate: -600% 350%;
+      animation-delay: 0.4s;
+    }
+    &:nth-child(2) {
+      translate: -650% 300%;
+      animation-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      translate: -500% 220%;
+      animation-delay: 0.6s;
+    }
+    &:nth-child(4) {
+      translate: -950% 280%;
+      animation-delay: 0.8s;
+    }
+    &:nth-child(5) {
+      translate: -600% 150%;
+      animation-delay: 0.1s;
+    }
+  }
 
   &_title {
     height: 100svh;
@@ -719,6 +740,7 @@ main {
 .picture {
   width: 30vw;
   height: auto;
+  z-index: 3;
 
   &.fixed {
     transform: rotate(90deg);
@@ -733,10 +755,23 @@ main {
   }
 
   &.absolute {
-    translate: -95% 0%;
+    transform: rotate(-20deg);
+    translate: -90% 0%;
     top: var(--absoluteTop);
     scale: 0.7;
     position: absolute;
+  }
+}
+
+.player {
+  translate: -120% 20%;
+  width: 32vw;
+  height: auto;
+  top: var(--absoluteTop);
+  position: absolute;
+
+  &.hand {
+    z-index: 4;
   }
 }
 
@@ -747,10 +782,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 7vh;
-  height: 7vh;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  font-size: 40px;
+  font-size: 3rem;
   color: #f0f0f0;
   position: fixed;
   bottom: 4vh;

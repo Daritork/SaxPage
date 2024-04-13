@@ -12,7 +12,7 @@ const Navigation = () => {
 
   return (
     <nav className="nav">
-      <img alt="logo" src={Logo} className="nav_logo" />
+      <img loading="lazy" alt="logo" src={Logo} className="nav_logo" />
       <ul className="nav__links navbar-nav">
         <li className="nav-item">
           <a className="nav-link" id="scrollToWelcome">
@@ -59,7 +59,7 @@ const Navigation = () => {
           <option value="en">English</option>
           <option value="de">Deutsch</option>
           <option value="ukr">Українська</option>
-          <option value="ru">руZZкий</option>
+          <option value="ru">русский</option>
         </select>
       </form>
     </nav>

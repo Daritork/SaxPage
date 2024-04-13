@@ -2,13 +2,17 @@ import GitHub from "../images/footer/GitHub.png";
 import Instagram from "../images/footer/Instagram.png";
 import LinkedIn from "../images/footer/LinkedIn.png";
 
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation(["home", "main"]);
+
   return (
     <footer className="footer">
       <hr className="footer_divide-line" />
       <div className="footer__content">
         <form className="footer__content__subscription">
-          <h3>Stay Connected</h3>
+          <h3>{t("footer_email-title")}</h3>
           <div className="footer__content__subscription__form">
             <input
               className="footer__content__subscription__form_email"
@@ -19,14 +23,14 @@ const Footer = () => {
               className="footer__content__subscription__form_submit"
               id="MailSubmit"
             >
-              Submit
+              {t("footer_email-submit")}
             </button>
           </div>
         </form>
         <div className="footer__content__social-media">
           <div className="footer__content__social-media__title">
             <h3 className="footer__content__social-media__title_text">
-              Social Media
+              {t("footer_socials")}
             </h3>
             <div className="footer__content__social-media__title_arrow"></div>
           </div>
@@ -53,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
       <p>
-        Designed and developed by
+        {t("footer_text")}
         <a href="https://github.com/Daritork" target="_blank">
           {" "}
           @Daritork
