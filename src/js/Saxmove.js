@@ -4,22 +4,24 @@ window.addEventListener("scroll", () => {
   const bodyStyle = document.body.style;
   var saxophone = document.getElementById("movingSax");
   //*
-  bodyStyle.setProperty(
-    "--scroll",
-    Math.min(
-      (
-        window.pageYOffset /
-        (window.innerHeight * 2 - window.innerHeight - 20)
-      ).toFixed(3),
-      1
-    )
-  );
-  if (bodyStyle.getPropertyValue("--scroll") >= 1) {
-    saxophone.classList.remove("fixed");
-    saxophone.classList.add("absolute");
-  }
-  if (bodyStyle.getPropertyValue("--scroll") < 1) {
-    saxophone.classList.add("fixed");
-    saxophone.classList.remove("absolute");
+  if (window.innerWidth > 1100) {
+    bodyStyle.setProperty(
+      "--scroll",
+      Math.min(
+        (
+          window.pageYOffset /
+          (window.innerHeight * 2 - window.innerHeight)
+        ).toFixed(3),
+        1
+      )
+    );
+    if (bodyStyle.getPropertyValue("--scroll") >= 1) {
+      saxophone.classList.remove("fixed");
+      saxophone.classList.add("absolute");
+    }
+    if (bodyStyle.getPropertyValue("--scroll") < 1) {
+      saxophone.classList.add("fixed");
+      saxophone.classList.remove("absolute");
+    }
   }
 });

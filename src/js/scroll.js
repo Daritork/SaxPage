@@ -1,20 +1,6 @@
 document
   .getElementById("scroll")
   .addEventListener("click", () => Scroll("#Welcome", true));
-window.addEventListener("load", () => {
-  document
-    .querySelector("#scrollToWelcome")
-    .addEventListener("click", () => Scroll("#Welcome", true));
-  document
-    .querySelector("#scrollToSaxophoneParts")
-    .addEventListener("click", () => Scroll("#Welcome", false));
-  document
-    .querySelector("#scrollToHistory")
-    .addEventListener("click", () => Scroll("#History", true));
-  document
-    .querySelector("#scrollToTypesOfSax")
-    .addEventListener("click", () => Scroll("#Types", true));
-});
 
 function Scroll(id, position) {
   document.querySelector(id).scrollIntoView(position);
@@ -30,13 +16,23 @@ window.addEventListener("scroll", () => {
     document.querySelector(".Scrollbutton").style.opacity = "0";
   }
 
-  if (bodyStyle.getPropertyValue("--scroll") > 0.92) {
+  if (
+    bodyStyle.getPropertyValue("--scroll") > 0.92 &&
+    window.innerWidth > 1100
+  ) {
     document.querySelectorAll(".header_notes").forEach((el) => {
       el.style.visibility = "visible";
     });
-  } else {
+  } else if (
+    bodyStyle.getPropertyValue("--scroll") < 0.92 &&
+    window.innerWidth > 1100
+  ) {
     document.querySelectorAll(".header_notes").forEach((el) => {
       el.style.visibility = "hidden";
+    });
+  } else {
+    document.querySelectorAll(".header_notes").forEach((el) => {
+      el.style.visibility = "visible";
     });
   }
 });

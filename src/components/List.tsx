@@ -304,12 +304,11 @@ function List() {
                           : saxType.heightIn + " in"}
                       </h4>
                     </li>
-                    <li>
-                      <img
-                        alt={saxType.pitchInfo}
-                        src={saxType.pitchInfo}
-                      ></img>
-                    </li>
+                    <img
+                      alt={saxType.pitchInfo}
+                      src={saxType.pitchInfo}
+                      className="svg"
+                    ></img>
                   </ul>
                 </div>
               )

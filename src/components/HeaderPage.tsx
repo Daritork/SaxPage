@@ -92,6 +92,31 @@ const HeaderPage = () => {
         <h1 className="header_notes">♪</h1>
         <h1 className="header_notes">♫</h1>
       </div>
+      <div className="header__second-slide-mobile" id="Second-slide">
+        <h1>{t("Sax-parts")}</h1>
+        <section className="header__second-slide-mobile_section">
+          <img loading="lazy" alt="Sax Body" src={SaxBody} />
+          <p>{t("Body_material")}</p>
+          <h2>{t("Body_title")}</h2>
+        </section>
+        <div className="divide-line"></div>
+        <section className="header__second-slide-mobile_section">
+          <img
+            loading="lazy"
+            alt="Swiper Bullet 1 (Sax Mouthpiece)"
+            src={Mouthpiece}
+          />
+          <p>{t("Mouthpiece_material")}</p>
+          <h2>{t("Mouthpiece_title")}</h2>
+        </section>
+        <div className="divide-line"></div>
+        <section className="header__second-slide-mobile_section">
+          <img loading="lazy" alt="Swiper Bullet 1 (Sax Reed)" src={Reed} />
+          <p>{t("Reed_material")}</p>
+          <p>{t("Reed_strength")}</p>
+          <h2>{t("Reed_title")}</h2>
+        </section>
+      </div>
     </header>
   );
 };
