@@ -4,17 +4,18 @@ window.addEventListener("scroll", () => {
   const bodyStyle = document.body.style;
   var saxophone = document.getElementById("movingSax");
   //*
-  if (window.innerWidth > 1100) {
-    bodyStyle.setProperty(
-      "--scroll",
-      Math.min(
-        (
-          window.pageYOffset /
-          (window.innerHeight * 2 - window.innerHeight)
-        ).toFixed(3),
-        1
-      )
-    );
+  bodyStyle.setProperty(
+    "--scroll",
+    Math.min(
+      (
+        window.pageYOffset /
+        (window.innerHeight * 2 - window.innerHeight)
+      ).toFixed(3),
+      1
+    )
+  );
+
+  if (window.innerWidth > 1300) {
     if (bodyStyle.getPropertyValue("--scroll") >= 1) {
       saxophone.classList.remove("fixed");
       saxophone.classList.add("absolute");

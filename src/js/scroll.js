@@ -18,14 +18,14 @@ window.addEventListener("scroll", () => {
 
   if (
     bodyStyle.getPropertyValue("--scroll") > 0.92 &&
-    window.innerWidth > 1100
+    window.innerWidth > 1300
   ) {
     document.querySelectorAll(".header_notes").forEach((el) => {
       el.style.visibility = "visible";
     });
   } else if (
     bodyStyle.getPropertyValue("--scroll") < 0.92 &&
-    window.innerWidth > 1100
+    window.innerWidth > 1300
   ) {
     document.querySelectorAll(".header_notes").forEach((el) => {
       el.style.visibility = "hidden";

@@ -1,7 +1,7 @@
 $gold: #fdbd01;
 $white: #f0f0f0;
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
   p {
     font-size: 1.4rem;
   }
@@ -19,7 +19,7 @@ $white: #f0f0f0;
   }
 
   .nav {
-    padding: 0 2.5vw;
+    padding: 0 3vw;
 
     &__links,
     &__language-change {
@@ -222,5 +222,171 @@ $white: #f0f0f0;
     img {
       display: none;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 1.25rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav {
+    &__hamburger {
+      width: 6vh;
+      height: 6vh;
+    }
+  }
+
+  .header {
+    overflow-y: hidden;
+
+    &_title {
+      letter-spacing: 10px;
+      height: 35vh;
+      font-size: 15vw;
+      margin-bottom: 8vh;
+    }
+
+    .player {
+      translate: -20% 85%;
+      height: 52vh;
+    }
+
+    .picture {
+      height: 50vh;
+    }
+
+    &_notes {
+      font-size: 10vw;
+      width: 4vh;
+      height: 4vh;
+
+      &:nth-child(1) {
+        translate: 450% 1400%;
+      }
+      &:nth-child(2) {
+        translate: 350% 1300%;
+      }
+      &:nth-child(3) {
+        translate: 350% 1050%;
+      }
+      &:nth-child(4) {
+        translate: 500% 1100%;
+      }
+      &:nth-child(5) {
+        translate: 470% 900%;
+      }
+    }
+
+    &__second-slide-mobile_section {
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  .famouns-brands__marquee {
+    animation: marqueeLeft 15s linear infinite;
+    width: calc(((42vw + 20px) * var(--total-marquee-items)) * 2);
+    span {
+      img {
+        width: 35vw;
+      }
+    }
+  }
+
+  .history {
+    &_article {
+      width: 70%;
+      text-align: center;
+    }
+  }
+
+  .saxTypes {
+    &__filter-fields {
+      padding-bottom: 2vh;
+      border-bottom: 2px solid $white;
+      justify-content: center;
+      gap: 2vh;
+
+      &__searchbar {
+        &_input {
+          height: 2rem;
+          width: 75vw;
+          font-size: 1rem;
+        }
+      }
+
+      &__field {
+        width: 100%;
+        justify-content: space-between;
+
+        &_radios {
+          input {
+            font-size: 1.3rem;
+            line-height: 1.4rem;
+          }
+        }
+      }
+    }
+
+    &__list__item {
+      min-height: 350px;
+    }
+  }
+
+  .footer {
+    padding: 0 6vw 2vh 6vw;
+    gap: 6vh;
+
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4vh;
+
+      &__subscription__form {
+        width: 100%;
+
+        &_email {
+          width: 80%;
+          padding: 1vh 3vw;
+          font-size: 1rem;
+        }
+
+        &_submit {
+          padding: 0 4vw;
+          font-size: 1.2rem;
+        }
+      }
+
+      &__social-media {
+        &__list {
+          &_element {
+            width: 15vw;
+          }
+        }
+      }
+    }
+  }
+
+  .Scrollbutton {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
   }
 }
