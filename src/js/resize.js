@@ -3,24 +3,8 @@ window.addEventListener("resize", () => {
   const bodyStyle = document.body.style;
   const saxophone = document.getElementById("movingSax");
   var topSpace;
-  //? Mrquee pesenctage */
-  bodyStyle.setProperty(
-    "--marquee",
-    (
-      (100 * ((0.452 * window.innerWidth + 20) * 6)) /
-      window.innerWidth
-    ).toFixed(1) + "%"
-  );
 
   if (window.innerWidth > 1300) {
-    //? Mrquee pesenctage */
-    bodyStyle.setProperty(
-      "--marquee",
-      (
-        (100 * ((0.215 * window.innerWidth + 20) * 6)) /
-        window.innerWidth
-      ).toFixed(1) + "%"
-    );
     topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
     //? Finds a "top" Property for a picture to be always in center */
     bodyStyle.setProperty(
@@ -52,24 +36,8 @@ window.onload = () => {
   const bodyStyle = document.body.style;
   const saxophone = document.getElementById("movingSax");
   var topSpace;
-  //? Mrquee pesenctage */
-  bodyStyle.setProperty(
-    "--marquee",
-    (
-      (100 * ((0.452 * window.innerWidth + 20) * 6)) /
-      window.innerWidth
-    ).toFixed(1) + "%"
-  );
 
   if (window.innerWidth > 1300) {
-    //? Mrquee pesenctage */
-    bodyStyle.setProperty(
-      "--marquee",
-      (
-        (100 * ((0.2135 * window.innerWidth + 20) * 6)) /
-        window.innerWidth
-      ).toFixed(1) + "%"
-    );
     var topSpace = (window.innerHeight - saxophone.offsetHeight) / 2;
     //? Finds a "top" Property for a picture to be always in center */
     bodyStyle.setProperty(

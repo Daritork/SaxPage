@@ -45,12 +45,16 @@ const Footer = () => {
                 href="https://linkedin.com/in/dmytro-diatlov-26aba7285"
                 target="_blank"
               >
-                <img alt="LinkedIn link" src={LinkedIn} />
+                <img className="LinkedIn" alt="LinkedIn link" src={LinkedIn} />
               </a>
             </li>
             <li className="footer__content__social-media__list_element">
               <a href="https://www.instagram.com/dimon_lucky_/" target="_blank">
-                <img alt="Instagram link" src={Instagram} />
+                <img
+                  className="Instagram"
+                  alt="Instagram link"
+                  src={Instagram}
+                />
               </a>
             </li>
           </ul>

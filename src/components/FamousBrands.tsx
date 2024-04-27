@@ -9,25 +9,22 @@ import Jupiter from "../images/famousBrands/Jupiter.png";
 const FamousBrands = () => {
   return (
     <div className="famouns-brands">
+      <div className="famouns-brands_fade"></div>
       <div className="famouns-brands__marquee">
-        <span>
-          <img src={Yanagisawa} alt="Yanagisawa" />
-          <img src={Keilwerth} alt="Keilwerth" />
-          <img src={Selmer} alt="Selmer" />
-          <img src={Yamaha} alt="Yamaha" />
-          <img src={PMauriat} alt="Paul Mauriat" />
-          <img src={Cannonball} alt="Cannpnball" />
-          <img src={Jupiter} alt="Jupiter" />
-        </span>
-        <span>
-          <img src={Yanagisawa} alt="Yanagisawa" />
-          <img src={Keilwerth} alt="Keilwerth" />
-          <img src={Selmer} alt="Selmer" />
-          <img src={Yamaha} alt="Yamaha" />
-          <img src={PMauriat} alt="Paul Mauriat" />
-          <img src={Cannonball} alt="Cannpnball" />
-          <img src={Jupiter} alt="Jupiter" />
-        </span>
+        <img src={Yanagisawa} alt="Yanagisawa" />
+        <img src={Keilwerth} alt="Keilwerth" />
+        <img src={Selmer} alt="Selmer" />
+        <img src={Yamaha} alt="Yamaha" />
+        <img src={PMauriat} alt="Paul Mauriat" />
+        <img src={Cannonball} alt="Cannpnball" />
+        <img src={Jupiter} alt="Jupiter" />
+        <img src={Yanagisawa} alt="Yanagisawa" />
+        <img src={Keilwerth} alt="Keilwerth" />
+        <img src={Selmer} alt="Selmer" />
+        <img src={Yamaha} alt="Yamaha" />
+        <img src={PMauriat} alt="Paul Mauriat" />
+        <img src={Cannonball} alt="Cannpnball" />
+        <img src={Jupiter} alt="Jupiter" />
       </div>
     </div>
   );

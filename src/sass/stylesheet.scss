@@ -12,10 +12,10 @@ $white: #f0f0f0;
 
 @keyframes marqueeLeft {
   0% {
-    left: 0;
+    transform: translateX(0);
   }
   100% {
-    left: calc(var(--marquee) * -1);
+    transform: translateX(calc(-50% - 2vw));
   }
 }
 
@@ -398,7 +398,6 @@ main {
   width: 100%;
 }
 .famouns-brands {
-  --total-marquee-items: 7;
   user-select: none;
   width: 100%;
   overflow: hidden;
@@ -414,30 +413,39 @@ main {
     )
     1;
 
+  &_fade {
+    transform: translateY(calc(-1px - 4vh));
+    z-index: 10;
+    width: 100%;
+    height: calc(15vw + 8vh);
+    position: absolute;
+    background: linear-gradient(
+        90deg,
+        #141414,
+        transparent 20%,
+        transparent 80%,
+        #141414
+      )
+      0;
+    pointer-events: none;
+  }
+
   &__marquee {
-    display: block;
-    width: calc(((21vw + 20px) * var(--total-marquee-items)) * 2);
-    position: relative;
-    animation: marqueeLeft 25s linear infinite;
+    gap: 3vw;
+    width: fit-content;
+    animation: linear infinite 25s marqueeLeft;
+    user-select: none;
+    display: flex;
+    align-items: center;
 
-    span {
+    img {
       user-select: none;
-      display: flex;
-      align-items: center;
-      gap: 3vw;
-      overflow: hidden;
+      width: 15vw;
+      height: auto;
+      display: block;
+      margin: 0 10px;
       float: left;
-      margin-right: 3vw;
-
-      img {
-        user-select: none;
-        width: 15vw;
-        height: auto;
-        display: block;
-        margin: 0 10px;
-        float: left;
-        transition: all 0.2s ease-out;
-      }
+      transition: all 0.2s ease-out;
     }
   }
 }
@@ -710,11 +718,44 @@ main {
     }
 
     &__social-media {
+      width: 25%;
+
+      &__title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5vw;
+
+        &_arrow {
+          height: 3px;
+          width: 10%;
+          background: $white;
+
+          &::after {
+            content: "♦";
+            color: $white;
+            position: relative;
+            left: 102%;
+            top: -280%;
+          }
+
+          & > .LinkedIn:hover {
+            width: 20%;
+          }
+
+          & > .Instagram:hover {
+            width: 30%;
+          }
+        }
+      }
+
       &__list {
         margin-top: 2vh;
         display: flex;
         list-style: none;
-        gap: 3vw;
+        justify-content: space-between;
+        align-items: center;
 
         &_element {
           width: 4vw;
