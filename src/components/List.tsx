@@ -1,138 +1,17 @@
 import { useEffect, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-//* Images
-import Soprillo from "../images/saxTypes/Soprillo.png";
-import Sopranino from "../images/saxTypes/Sopranino.png";
-import Studio_Soprano from "../images/saxTypes/Studio Soprano.png";
-import Curved_Soprano from "../images/saxTypes/Curved Soprano.png";
-import Alto from "../images/saxTypes/Alto.png";
-import Tenor from "../images/saxTypes/Tenor.png";
-import Baritone from "../images/saxTypes/Baritone.png";
-import Bass from "../images/saxTypes/Bass.png";
-import Contrabass from "../images/saxTypes/Contrabass.png";
-import C from "../images/saxTypes/C -.png";
-//*PichesInfo
-import P_Soprillo from "../images/saxTypes/pitches/Soprillo.svg";
-import P_Sopranino from "../images/saxTypes/pitches/Sopranino.svg";
-import P_Soprano from "../images/saxTypes/pitches/Soprano.svg";
-import P_Alto from "../images/saxTypes/pitches/Alto.svg";
-import P_Tenor from "../images/saxTypes/pitches/Tenor.svg";
-import P_Baritone from "../images/saxTypes/pitches/Baritone.svg";
-import P_Bass from "../images/saxTypes/pitches/Bass.svg";
-import P_Contrabass from "../images/saxTypes/pitches/Contrabass.svg";
-import P_C from "../images/saxTypes/pitches/C.svg";
 
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+import { SaxList, saxTypes } from "./SaxList";
 
 function List() {
   //* i18n
   const { t } = useTranslation(["home", "main"]);
+  console.log(i18next.language);
 
   //*Auto-Animate
   const [parent] = useAutoAnimate({ duration: 200 });
-  //*Saxophone List
-  const [saxTypes] = useState<
-    {
-      id: number;
-      name: string;
-      heightCm: number;
-      heightIn: number;
-      pitch: string;
-      imgPath: any;
-      pitchInfo: any;
-    }[]
-  >([
-    {
-      id: 1,
-      name: "Soprillo",
-      pitch: "B",
-      heightCm: 33,
-      heightIn: 13,
-      imgPath: Soprillo,
-      pitchInfo: P_Soprillo,
-    },
-    {
-      id: 2,
-      name: "Sopranino",
-      pitch: "Es",
-      heightCm: 68,
-      heightIn: 27,
-      imgPath: Sopranino,
-      pitchInfo: P_Sopranino,
-    },
-    {
-      id: 3,
-      name: "Studio Soprano",
-      pitch: "B",
-      heightCm: 71,
-      heightIn: 28,
-      imgPath: Studio_Soprano,
-      pitchInfo: P_Soprano,
-    },
-    {
-      id: 4,
-      name: "Curved Soprano",
-      pitch: "B",
-      heightCm: 46,
-      heightIn: 18,
-      imgPath: Curved_Soprano,
-      pitchInfo: P_Soprano,
-    },
-    {
-      id: 5,
-      name: "Alto",
-      pitch: "Es",
-      heightCm: 74,
-      heightIn: 29,
-      imgPath: Alto,
-      pitchInfo: P_Alto,
-    },
-    {
-      id: 6,
-      name: "Tenor",
-      pitch: "B",
-      heightCm: 94,
-      heightIn: 37,
-      imgPath: Tenor,
-      pitchInfo: P_Tenor,
-    },
-    {
-      id: 7,
-      name: "Baritone",
-      pitch: "Es",
-      heightCm: 132,
-      heightIn: 52,
-      imgPath: Baritone,
-      pitchInfo: P_Baritone,
-    },
-    {
-      id: 8,
-      name: "Bass",
-      pitch: "B",
-      heightCm: 158,
-      heightIn: 62,
-      imgPath: Bass,
-      pitchInfo: P_Bass,
-    },
-    {
-      id: 9,
-      name: "Contrabass",
-      pitch: "Es",
-      heightCm: 200,
-      heightIn: 79,
-      imgPath: Contrabass,
-      pitchInfo: P_Contrabass,
-    },
-    {
-      id: 10,
-      name: "C - Melody",
-      pitch: "C",
-      heightCm: 64,
-      heightIn: 25,
-      imgPath: C,
-      pitchInfo: P_C,
-    },
-  ]);
 
   //* User content prefer
   const [filter, setFilter] = useState<{
@@ -146,17 +25,7 @@ function List() {
   });
 
   //*Search result
-  const [searchResult, setSearchResult] = useState<
-    {
-      id: number;
-      name: string;
-      heightCm: number;
-      heightIn: number;
-      pitch: string;
-      imgPath: any;
-      pitchInfo: any;
-    }[]
-  >([]);
+  const [searchResult, setSearchResult] = useState<SaxList[]>([]);
 
   function handleSubmit(e: any) {
     e.preventDefault();
@@ -194,14 +63,16 @@ function List() {
   useEffect(() => {
     if (filter.pitch === "All") {
       const results: any[] = saxTypes.filter((type) =>
-        type.name.toLowerCase().includes(filter.searchTerm.toLowerCase())
+        type.name[1].toLowerCase().includes(filter.searchTerm.toLowerCase())
       );
       setSearchResult(results);
     } else {
       const results: any[] = saxTypes.filter(
         (type) =>
-          type.name.toLowerCase().includes(filter.searchTerm.toLowerCase()) &&
-          type.pitch === filter.pitch
+          type.name[0]
+            .toLowerCase()
+            .includes(filter.searchTerm.toLowerCase()) &&
+          type.pitch[0] === filter.pitch
       );
       setSearchResult(results);
     }
@@ -288,20 +159,22 @@ function List() {
             (saxType) =>
               (saxType.pitch === filter.pitch || filter.pitch === "All") && (
                 <div className="saxTypes__list__item" key={saxType.id}>
-                  <h3>{saxType.name + " Saxophone"}</h3>
+                  <h3>
+                    {t("sax_name_" + saxType.name) + " " + t("saxophone")}
+                  </h3>
                   <img alt={saxType.imgPath} src={saxType.imgPath}></img>
                   <ul className="saxTypes__list__item_info-list">
                     <li>
                       <h4>
-                        {t("filter_pitch")} {saxType.pitch}
+                        {t("filter_pitch")} {t("filter_" + saxType.pitch)}
                       </h4>
                     </li>
                     <li>
                       <h4>
                         {t("height")} ~
                         {filter.lengthIn === "cm"
-                          ? saxType.heightCm + " cm"
-                          : saxType.heightIn + " in"}
+                          ? saxType.heightCm + " " + t("filter_cm")
+                          : saxType.heightIn + " " + t("filter_in")}
                       </h4>
                     </li>
                     <img

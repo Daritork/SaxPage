@@ -1,4 +1,6 @@
 {
+  "saxophone": "Саксофон",
+
   "nav__link_welcome": "Начало",
 
   "Sax-parts": "Составьляющие",
@@ -21,6 +23,18 @@
   "History_article_span_4": " запатентирован в Париже в 1846 году",
 
   "Sax-types": "Виды",
+
+  "sax_name_Soprillo": "Соприлло",
+  "sax_name_Sopranino": "Сопранино",
+  "sax_name_Studio-Soprano": "Сопран",
+  "sax_name_Curved-Soprano": "Изогнутый Сопран",
+  "sax_name_Alto": "Альт",
+  "sax_name_Tenor": "Тенор",
+  "sax_name_Baritone": "Баритон",
+  "sax_name_Bass": "Бас",
+  "sax_name_Contrabass": "Контрабас",
+  "sax_name_C-Melody": "С Мелоди",
+
   "filter_placeholder": "Поиск",
   "filter_pitch": "Тональность:",
   "filter_all": "Все",

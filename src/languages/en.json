@@ -1,4 +1,6 @@
 {
+  "saxophone": "Saxophone",
+
   "nav__link_welcome": "Welcome",
 
   "Sax-parts": "Parts",
@@ -21,6 +23,18 @@
   "History_article_span_4": " patented in Paris in 1846",
 
   "Sax-types": "Types",
+
+  "sax_name_Soprillo": "Soprillo",
+  "sax_name_Sopranino": "Sopranino",
+  "sax_name_Studio-Soprano": "Studio Soprano",
+  "sax_name_Curved-Soprano": "Curved Soprano",
+  "sax_name_Alto": "Alto",
+  "sax_name_Tenor": "Tenor",
+  "sax_name_Baritone": "Baritone",
+  "sax_name_Bass": "Bass",
+  "sax_name_Contrabass": "Contrabass",
+  "sax_name_C-Melody": "C - Melody",
+
   "filter_placeholder": "Search name",
   "filter_pitch": "Pitch:",
   "filter_all": "All",

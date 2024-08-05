@@ -1,15 +1,17 @@
-import Yanagisawa from "../images/famousBrands/Yanagisawa.png";
-import Keilwerth from "../images/famousBrands/Keilwerth.png";
-import Selmer from "../images/famousBrands/Selmer.png";
-import Yamaha from "../images/famousBrands/Yamaha.png";
-import PMauriat from "../images/famousBrands/PMauriat.png";
-import Cannonball from "../images/famousBrands/Cannonball.png";
-import Jupiter from "../images/famousBrands/Jupiter.png";
+import {
+  Cannonball,
+  Jupiter,
+  Keilwerth,
+  PMauriat,
+  Selmer,
+  Yamaha,
+  Yanagisawa,
+} from "../images/export";
 
 const FamousBrands = () => {
   return (
     <div className="famouns-brands">
-      <div className="famouns-brands_fade"></div>
+      <div className="famouns-brands_fade" />
       <div className="famouns-brands__marquee">
         <img src={Yanagisawa} alt="Yanagisawa" />
         <img src={Keilwerth} alt="Keilwerth" />
