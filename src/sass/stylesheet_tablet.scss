@@ -88,9 +88,7 @@ $white: #f0f0f0;
     right: 0;
     top: 10vh;
     top: 10svh;
-    border-radius: 0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 0 20px 20px;
 
     &__links {
       display: flex;
@@ -314,17 +312,22 @@ $white: #f0f0f0;
 
   .history {
     &_article {
-      width: 70%;
+      width: 80%;
       text-align: center;
+      line-height: 140%;
     }
   }
 
   .saxTypes {
+    margin-bottom: 5vh;
+
     &__filter-fields {
+      width: 90%;
       padding-bottom: 2vh;
       border-bottom: 2px solid $white;
       justify-content: center;
-      gap: 2vh;
+      gap: 1vh;
+
 
       &__searchbar {
         &_input {
@@ -347,14 +350,20 @@ $white: #f0f0f0;
       }
     }
 
-    &__list__item {
-      min-height: 350px;
+    &__list {
+      gap: 8vw;
+
+      &__item {
+        min-height: 350px;
+      }
     }
+
+
   }
 
   .footer {
     padding: 0 6vw 2vh 6vw;
-    gap: 6vh;
+    gap: 3vh;
 
     &__content {
       flex-direction: column;
@@ -377,7 +386,10 @@ $white: #f0f0f0;
       }
 
       &__social-media {
+        width: 100%;
         &__list {
+          justify-content: flex-start;
+          gap: 6vw;
           &_element {
             width: 15vw;
           }

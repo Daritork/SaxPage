@@ -11,28 +11,28 @@ const Footer = () => {
     <footer className="footer">
       <hr className="footer_divide-line" />
       <div className="footer__content">
-        <form className="footer__content__subscription">
-          <h3>{t("footer_email-title")}</h3>
-          <div className="footer__content__subscription__form">
-            <input
-              className="footer__content__subscription__form_email"
-              placeholder="example@email.com"
-              type="email"
-            />
-            <button
-              className="footer__content__subscription__form_submit"
-              id="MailSubmit"
-            >
-              {t("footer_email-submit")}
-            </button>
-          </div>
-        </form>
+        {/*<form className="footer__content__subscription">*/}
+        {/*  <h3>{t("footer_email-title")}</h3>*/}
+        {/*  <div className="footer__content__subscription__form">*/}
+        {/*    <input*/}
+        {/*      className="footer__content__subscription__form_email"*/}
+        {/*      placeholder="example@email.com"*/}
+        {/*      type="email"*/}
+        {/*    />*/}
+        {/*    <button*/}
+        {/*      className="footer__content__subscription__form_submit"*/}
+        {/*      id="MailSubmit"*/}
+        {/*    >*/}
+        {/*      {t("footer_email-submit")}*/}
+        {/*    </button>*/}
+        {/*  </div>*/}
+        {/*</form>*/}
         <div className="footer__content__social-media">
           <div className="footer__content__social-media__title">
             <h3 className="footer__content__social-media__title_text">
               {t("footer_socials")}
             </h3>
-            <div className="footer__content__social-media__title_arrow"></div>
+            {/*<div className="footer__content__social-media__title_arrow"></div>*/}
           </div>
           <ul className="footer__content__social-media__list">
             <li className="footer__content__social-media__list_element">

@@ -198,7 +198,7 @@ h4 {
 
       option {
         background: #000;
-        border: 0px transparent;
+        border: 0 transparent;
         border-radius: 20px;
         outline: none;
       }
@@ -362,10 +362,8 @@ h4 {
       width: 4.5vw;
       height: 4.5vw;
       border: 2px dashed $gold;
-      background: transparent;
       background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      background: transparent no-repeat center;
       margin: 15px 0 !important;
       transition: all 0.2s ease-in-out;
       opacity: 0.4;
@@ -386,9 +384,7 @@ h4 {
 
       &-active {
         opacity: 1;
-        background: transparent;
-        background-position: center;
-        background-repeat: no-repeat;
+        background: transparent no-repeat center;
         border: 2px solid $gold;
       }
     }
@@ -500,7 +496,6 @@ main {
         width: auto;
         height: 5vh;
         padding: 2.2vh 1vw;
-        border: 0;
         border: 2px solid $gold;
         border-radius: 10px;
         transition: all 0.3s linear;
@@ -630,7 +625,6 @@ main {
         position: relative;
         z-index: 3;
         color: white;
-        transition: 0.5s;
         transform: translateY(-70%);
         transition: all 0.3s ease-in-out;
         opacity: 0;
@@ -680,10 +674,7 @@ main {
         display: flex;
 
         &_email {
-          border-top-left-radius: 15px;
-          border-bottom-left-radius: 15px;
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
+          border-radius: 15px 0 0 15px;
           border: 2px solid $gold;
           background-color: transparent;
           color: $white;
@@ -698,10 +689,7 @@ main {
         &_submit {
           border: 3px solid $gold;
           background-color: $gold;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          border-top-right-radius: 15px;
-          border-bottom-right-radius: 15px;
+          border-radius: 0 15px 15px 0;
           padding: 0 2vw;
           color: #141414;
           font-size: 1.5rem;
@@ -793,7 +781,7 @@ main {
 
   &.fixed {
     transform: rotate(90deg);
-    translate: 0% 0;
+    translate: 0 0;
     position: fixed;
     animation: 1s movement linear infinite;
     animation-play-state: paused;
