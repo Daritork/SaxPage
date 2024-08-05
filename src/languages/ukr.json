@@ -26,14 +26,14 @@
 
   "sax_name_Soprillo": "Сопрілло",
   "sax_name_Sopranino": "Сопраніно",
-  "sax_name_Studio-Soprano": "Сопрано",
-  "sax_name_Curved-Soprano": "Вигнутий Сопрано",
+  "sax_name_Studio Soprano": "Сопрано",
+  "sax_name_Curved Soprano": "Вигнутий Сопрано",
   "sax_name_Alto": "Альт",
   "sax_name_Tenor": "Тенор",
   "sax_name_Baritone": "Барітон",
   "sax_name_Bass": "Бас",
   "sax_name_Contrabass": "Контрабас",
-  "sax_name_C-Melody": "С Мелоді",
+  "sax_name_C - Melody": "С Мелоді",
 
   "filter_placeholder": "Шукати",
   "filter_pitch": "Тональність:",

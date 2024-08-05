@@ -56,7 +56,7 @@ export const saxTypes: SaxList[] = [
   },
   {
     id: 3,
-    name: "Studio-Soprano",
+    name: "Studio Soprano",
     pitch: "B",
     heightCm: 71,
     heightIn: 28,
@@ -65,7 +65,7 @@ export const saxTypes: SaxList[] = [
   },
   {
     id: 4,
-    name: "Curved-Soprano",
+    name: "Curved Soprano",
     pitch: "B",
     heightCm: 46,
     heightIn: 18,
@@ -119,7 +119,7 @@ export const saxTypes: SaxList[] = [
   },
   {
     id: 10,
-    name: "C-Melody",
+    name: "C - Melody",
     pitch: "C",
     heightCm: 64,
     heightIn: 25,

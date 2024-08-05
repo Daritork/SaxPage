@@ -26,14 +26,14 @@
 
   "sax_name_Soprillo": "Soprillo",
   "sax_name_Sopranino": "Sopranino",
-  "sax_name_Studio-Soprano": "Studio Soprano",
-  "sax_name_Curved-Soprano": "Curved Soprano",
+  "sax_name_Studio Soprano": "Studio Soprano",
+  "sax_name_Curved Soprano": "Curved Soprano",
   "sax_name_Alto": "Alto",
   "sax_name_Tenor": "Tenor",
   "sax_name_Baritone": "Baritone",
   "sax_name_Bass": "Bass",
   "sax_name_Contrabass": "Contrabass",
-  "sax_name_C-Melody": "C - Melody",
+  "sax_name_C - Melody": "C - Melody",
 
   "filter_placeholder": "Search name",
   "filter_pitch": "Pitch:",

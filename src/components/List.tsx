@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import { useTranslation } from "react-i18next";
-import i18next from "i18next";
 import { SaxList, saxTypes } from "./SaxList";
 
 function List() {
   //* i18n
   const { t } = useTranslation(["home", "main"]);
-  console.log(i18next.language);
 
   //*Auto-Animate
   const [parent] = useAutoAnimate({ duration: 200 });
@@ -61,21 +59,14 @@ function List() {
 
   //* Search method
   useEffect(() => {
-    if (filter.pitch === "All") {
-      const results: any[] = saxTypes.filter((type) =>
-        type.name[1].toLowerCase().includes(filter.searchTerm.toLowerCase())
-      );
-      setSearchResult(results);
-    } else {
-      const results: any[] = saxTypes.filter(
-        (type) =>
-          type.name[0]
-            .toLowerCase()
-            .includes(filter.searchTerm.toLowerCase()) &&
-          type.pitch[0] === filter.pitch
-      );
-      setSearchResult(results);
-    }
+    const results: any[] = saxTypes.filter(
+      (type) =>
+        t("sax_name_" + type.name)
+          .toLowerCase()
+          .includes(filter.searchTerm.toLowerCase()) &&
+        (type.pitch === filter.pitch || filter.pitch === "All")
+    );
+    setSearchResult(results);
   }, [filter]);
 
   return (
